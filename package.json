@@ -7,7 +7,7 @@
     "pretest": "standard --version || npm -g install standard",
     "test": "mocha && standard",
     "preformat": "standard --version || npm -g install standard",
-    "format": "standard --format",
+    "format": "standard --fix",
     "thought": "thought run -a",
     "prethoughtcheck": "thought --version || npm -g install thought",
     "thoughtcheck": "thought check-engines",
@@ -26,8 +26,13 @@
   },
   "homepage": "https://github.com/bootprint/bootprint-json-schema",
   "dependencies": {
-    "bootprint-base": "<1.0.0"
+    "bootprint-base": "^1.0.0",
+    "lodash": "^4.17.2"
   },
+  "peerDependencies": {
+    "bootprint": "^1.0.0"
+  },
+
   "files": [
     "handlebars",
     "less",
@@ -35,7 +40,7 @@
   ],
   "config": {
     "ghooks": {
-      "pre-commit": "standard"
+      "pre-push": "standard && thoughtful precommit"
     }
   },
   "devDependencies": {

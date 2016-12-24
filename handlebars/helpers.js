@@ -41,8 +41,9 @@ module.exports = {
   /**
    *
    * @param range a json-schema object with minimum, maximum, exclusiveMinimum, exclusiveMaximum
-   * @param {number} [range.minimum]
-   * @param {number} [range.maximum]
+   * @param {number=} [range.minimum]
+   * @param {number=} [range.maximum]
+   * @param {string} [range.type] the json-type (integer, or number)
    * @param {boolean} [range.minimumExclusive]
    * @param {boolean} [range.maximumExclusive]
    */

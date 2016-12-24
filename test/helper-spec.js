@@ -52,4 +52,39 @@ describe('The Handlebars-helpers:', function () {
       expect(dt({ type: 'array', items: { type: 'array', items: { type: 'string' } } })).to.equal('string[][]')
     })
   })
+
+  describe('the json-schema--datatype helper', function () {
+    // Call the datatype-helper
+    function range (obj) {
+      return run('{{{json-schema--range range}}}', { range: obj })
+    }
+
+    it('should handle empty ranges gracefully', function () {
+      expect(range({})).to.equal('')
+    })
+
+    it('should render a range for only minimum (starting with coma)', function () {
+      expect(range({ minimum: 2, type: 'number' })).to.equal(', { x ∈ ℝ | x ≥ 2 }')
+    })
+
+    it('should render a range for only maximum (starting with coma)', function () {
+      expect(range({ maximum: 2, type: 'number' })).to.equal(', { x ∈ ℝ | x ≤ 2 }')
+    })
+
+    it('should render a range with minimum and maximum (starting with coma)', function () {
+      expect(range({ maximum: 2, minimum: 0, type: 'number' })).to.equal(', { x ∈ ℝ | 0 ≤ x ≤ 2 }')
+    })
+
+    it('should render a range with minimumExclusive and maximum (starting with coma)', function () {
+      expect(range({ maximum: 2, minimum: 0, minimumExclusive: true, type: 'number' })).to.equal(', { x ∈ ℝ | 0 < x ≤ 2 }')
+    })
+
+    it('should render a range with minimum and maximumExclusive (starting with coma)', function () {
+      expect(range({ maximum: 2, maximumExclusive: true, minimum: 0, type: 'number' })).to.equal(', { x ∈ ℝ | 0 ≤ x < 2 }')
+    })
+
+    it('should render the correct set-symbol for integers', function () {
+      expect(range({ type: 'integer', minimum: 0 })).to.equal(', { x ∈ ℤ | x ≥ 0 }')
+    })
+  })
 })
