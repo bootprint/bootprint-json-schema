@@ -19,7 +19,7 @@ describe('The fstab-fixture', function () {
   })
 
   it('should have a pattern-block in the fstab-section', function () {
-    expect(context.$('#definition-diskUUID .json-property-pattern').text())
+    expect(context.$('#definition-diskUUID .json-property-pattern .json-schema--regex').text())
       .to.equal('^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$')
   })
 })

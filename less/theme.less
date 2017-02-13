@@ -101,17 +101,15 @@
 }
 
 .json-property-pattern {
-  &:before, &:after {
-    color: lighten(@text-color, 30%)
-  }
+  font-weight: lighter;
+  font-size: small;
+}
 
-  &:before {
-    content: 'must match /';
-  }
-  &:after {
+.json-schema--regex {
+  &:before, &:after {
+    color: lighten(@text-color, 30%);
     content: '/';
   }
-
 }
 
 .json-property-type {
