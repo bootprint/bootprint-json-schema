@@ -100,6 +100,19 @@
   .named-label(@msg-json-read-only)
 }
 
+.json-property-pattern {
+  &:before, &:after {
+    color: lighten(@text-color, 30%)
+  }
+
+  &:before {
+    content: 'must match /';
+  }
+  &:after {
+    content: '/';
+  }
+
+}
 
 .json-property-type {
   font-style: italic;
