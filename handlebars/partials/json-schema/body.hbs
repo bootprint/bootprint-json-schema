@@ -18,11 +18,11 @@
     {{#ifeq type 'object'}}
         {{>json-schema/type-object}}
     {{else}}
-        {{#ifeq type 'array'}}
+        {{#ifcontains type 'array'}}
             {{#if items}}
                 {{>json-schema/array-items items}}
             {{/if}}
-        {{/ifeq}}
+        {{/ifcontains}}
     {{/ifeq}}
 {{else}}
     {{>json-schema/type-object}}

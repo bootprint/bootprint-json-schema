@@ -101,5 +101,16 @@ function dataType (value) {
   if (value.type === 'array') {
     return dataType(value.items || {}) + '[]'
   }
+  if (Array.isArray(value.type)) {
+    var types = ''
+    value.type.forEach(function (element) {
+      var subType = {}
+      subType.type = element
+      subType.items = value.items || {}
+      if (types) types += '|'
+      types += dataType(subType)
+    })
+    if (types) return types
+  }
   return value.type
 }
