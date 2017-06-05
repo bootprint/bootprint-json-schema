@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "bootprint-unit-testing": "^1.0.0",
-    "chai": "^3.5.0",
+    "chai": "^4.0.2",
     "ghooks": "^2.0.0",
     "handlebars": "^4.0.6",
     "mocha": "^3.2.0",
