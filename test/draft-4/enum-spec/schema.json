@@ -1,0 +1,48 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema to test enums",
+  "definitions": {
+    "stringEnum": {
+      "type": "string",
+      "enum": [
+        "abc",
+        "def",
+        "ghi"
+      ]
+    },
+    "numberEnum": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "objectEnum": {
+      "type": "object",
+      "enum": [
+        {
+          "a": 1
+        },
+        {
+          "b": "Nils"
+        }
+      ]
+    },
+    "mixed": {
+      "enum": [
+        {
+          "a": "object"
+        },
+        [
+          "an",
+          "array"
+        ],
+        1,
+        "a string",
+        true
+      ]
+    }
+  }
+}

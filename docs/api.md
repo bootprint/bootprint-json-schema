@@ -18,7 +18,7 @@ This page describes the API of this Bootprint-module
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/templates/index.html.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/templates/index.html.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/templates/index.html.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/templates/index.html.hbs</a>        </td>
     </tr>
         <tr>
             <th>Structure</th>
@@ -175,7 +175,7 @@ Default template for rendering the HTML-page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/base/body.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/base/body.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/base/body.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/base/body.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -206,7 +206,7 @@ Renders the main-schema as panel and the sub-schemas below.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/footer.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/footer.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/footer.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/footer.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -232,7 +232,7 @@ This partial is displayed at the bottom of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/header.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/header.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/header.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/header.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -258,7 +258,7 @@ This partial is displayed at the top of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/html-head-extra.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/html-head-extra.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/html-head-extra.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/html-head-extra.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -283,7 +283,7 @@ This partial is added inside the <head>-tag, after the
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/html-head.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/html-head.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/html-head.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/html-head.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -316,7 +316,7 @@ This partial is rendered into the `<head>`-tag of the page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/javascript-libs.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/javascript-libs.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/javascript-libs.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/javascript-libs.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -338,7 +338,7 @@ This partial is rendered below the `footer`-partial of the page. You can include
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/title.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/title.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/title.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/title.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -360,7 +360,7 @@ This partial is rendered into the HTML-title in the `<head>`-tag of the page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/additionalProperties.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/additionalProperties.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/additionalProperties.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/additionalProperties.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -388,7 +388,7 @@ Show a subschema for additionaProperties of a `object` definition.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/allOf.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/allOf.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/allOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/allOf.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -416,7 +416,7 @@ renders a json-schema "allOf"-definition.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/anyOf.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/anyOf.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/anyOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/anyOf.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -444,7 +444,7 @@ renders a json-schema "anyOf"-definition.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/array-items.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/array-items.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/array-items.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/array-items.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -472,7 +472,7 @@ renders a json-schema "items"-definition of array-types.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/body.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/body.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/body.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/body.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -509,7 +509,7 @@ Renders a json-schema without the surrounding panel.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/datatype.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/datatype.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/datatype.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/datatype.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -545,7 +545,7 @@ When properties are renderered this partial renders the datatype of a property,
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/definitions.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/definitions.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/definitions.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/definitions.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -572,7 +572,7 @@ Renders all subschemas
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/main-panel.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/main-panel.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/main-panel.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/main-panel.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -604,7 +604,7 @@ Renders a json.schema inside a bootstrap-panel.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/properties.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/properties.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/properties.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/properties.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -632,7 +632,7 @@ Renders json-schema object properties.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/reference.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/reference.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/reference.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/reference.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -655,7 +655,7 @@ Renders a reference to a subschema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/partials/json-schema/type-object.hbs">bootprint-json-schema @ 1.1.0 / handlebars/partials/json-schema/type-object.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/type-object.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/type-object.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -681,48 +681,41 @@ Renders the properties of an `object`
 
 # Helpers 
 
-(from [bootprint-base@2.0.0-rc.1/handlebars/helpers.js](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/helpers.js))
+(from [bootprint-base@2.0.0-rc.2/handlebars/helpers.js](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/helpers.js))
 
-## Members
+<a name="helpers"></a>
 
-<dl>
-<dt><a href="#toUpperCase">toUpperCase</a> ⇒ <code>string</code></dt>
-<dd><p>Converts a string to uppercase</p>
-</dd>
-<dt><a href="#eachSorted">eachSorted</a> ⇒ <code>string</code></dt>
-<dd><p>This block-helper can be used to iterate objects sorted by key. It behaves like the built-in
-<code>{{#each ...}}</code>-helper except that it can only be used for objects and the output is in a
-deterministic order (i.e. sorted).</p>
-<p>Example template:</p>
-<pre><code class="lang-handlebars">{{#eachSorted obj}}
-   {{@index}} of {{@length}}: {{@key}}={{.}}
-{{/eachSorted}}
-</code></pre>
-<p>With the data <code>{ b: &#39;another one&#39;, a: &#39;first&#39; }</code>, ignoring newlines and indents, this will output</p>
-<pre><code class="lang-text">1 of 2: a=first
-2 of 2: b=another one
-</code></pre>
-<p>The helper will set the following @-values according to the Handlebars documentation:
-<code>@first</code>, <code>@index</code>, <code>@key</code>, <code>@last</code>, <code>@length</code></p>
-</dd>
-</dl>
-
-<a name="toUpperCase"></a>
-
-## toUpperCase ⇒ <code>string</code>
-Converts a string to uppercase
+## helpers
+Default Handlebars-helpers for `bootprint-base`
 
 **Kind**: global variable  
+
+* [helpers](#helpers)
+    * [.toUpperCase(value)](#helpers.toUpperCase) ⇒ <code>string</code>
+    * [.eachSorted()](#helpers.eachSorted) ⇒ <code>string</code>
+    * [.equal(value1, value2)](#helpers.equal) ⇒ <code>boolean</code>
+    * [.md(&#x60;value&#x60;)](#helpers.md) ⇒ <code>Handlebars.SafeString</code>
+    * [.ifeq(&#x60;v1&#x60;, &#x60;v2&#x60;)](#helpers.ifeq)
+    * [.json(value)](#helpers.json) ⇒ <code>string</code>
+    * [.ifcontains(array, object, options)](#helpers.ifcontains) ⇒ <code>string</code>
+    * [.htmlId(value)](#helpers.htmlId) ⇒ <code>string</code>
+
+<a name="helpers.toUpperCase"></a>
+
+### helpers.toUpperCase(value) ⇒ <code>string</code>
+Converts a string to uppercase
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
 **Returns**: <code>string</code> - the uppercase string  
-**Api**: public  
+**Access**: public  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | value | <code>string</code> | the input string |
 
-<a name="eachSorted"></a>
+<a name="helpers.eachSorted"></a>
 
-## eachSorted ⇒ <code>string</code>
+### helpers.eachSorted() ⇒ <code>string</code>
 This block-helper can be used to iterate objects sorted by key. It behaves like the built-in
 `{{#each ...}}`-helper except that it can only be used for objects and the output is in a
 deterministic order (i.e. sorted).
@@ -745,26 +738,187 @@ With the data `{ b: 'another one', a: 'first' }`, ignoring newlines and indents,
 The helper will set the following @-values according to the Handlebars documentation:
 `@first`, `@index`, `@key`, `@last`, `@length`
 
-**Kind**: global variable  
-**Api**: public  
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+<a name="helpers.equal"></a>
+
+### helpers.equal(value1, value2) ⇒ <code>boolean</code>
+Checks whether two values a equal as in `value1 == value2` (not `===`)
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param |
+| --- |
+| value1 | 
+| value2 | 
+
+<a name="helpers.md"></a>
+
+### helpers.md(&#x60;value&#x60;) ⇒ <code>Handlebars.SafeString</code>
+Render a markdown-formatted text as HTML.
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Returns**: <code>Handlebars.SafeString</code> - a Handlebars-SafeString containing the provieded
+     markdown, rendered as HTML.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| `value` | <code>string</code> | the markdown-formatted text |
+| `options.hash.stripParagraph` | <code>boolean</code> | the marked-md-renderer wraps generated HTML in a &lt;p>-tag by default.      If this options is set to true, the &lt;p>-tag is stripped. |
+
+<a name="helpers.ifeq"></a>
+
+### helpers.ifeq(&#x60;v1&#x60;, &#x60;v2&#x60;)
+Block helper that compares to values. The body is executed if both value equal.
+Example:
+
+```hbs
+{{#ifeq value 10}}
+   Value is 10
+{{else}}
+   Value is not 10
+{{/ifeq}}
+```
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| `v1` | <code>object</code> | the first value |
+| `v2` | <code>object</code> | the second value |
+
+<a name="helpers.json"></a>
+
+### helpers.json(value) ⇒ <code>string</code>
+Converts a javascript-object into a stringified highlighted JSON-object
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>object</code> | the javascript object |
+
+<a name="helpers.ifcontains"></a>
+
+### helpers.ifcontains(array, object, options) ⇒ <code>string</code>
+Executes the block, if an object is part of an array
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| array | <code>Array.&lt;object&gt;</code> | the array |
+| object | <code>object</code> | the javascript object |
+| options | <code>object</code> | the Handlebars options |
+
+<a name="helpers.htmlId"></a>
+
+### helpers.htmlId(value) ⇒ <code>string</code>
+Replace all characters that may not be used in HTML id-attributes by '-'.
+There is still the restriction that IDs may only start with letters, which
+is not addressed by this helper.
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Returns**: <code>string</code> - the value after replacement and escaping  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>string</code> | the input value |
+
 
 
 
 # Helpers 
 
-(from [bootprint-json-schema@1.1.0/handlebars/helpers.js](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/helpers.js))
+(from [bootprint-json-schema@2.0.0-rc.1/handlebars/helpers.js](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/helpers.js))
 
-<a name="dataType"></a>
+## Members
 
-## dataType(value) ⇒ <code>String</code>
+<dl>
+<dt><a href="#helpers">helpers</a></dt>
+<dd><p>Handlebars helpers for <code>bootprint-json-schema</code></p>
+</dd>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#numericRange">numericRange(range)</a> ⇒ <code>*</code></dt>
+<dd><p>Render a range for numeric types (integer, number)</p>
+</dd>
+<dt><a href="#stringLengthRange">stringLengthRange(range)</a></dt>
+<dd><p>Render string length restrictions</p>
+</dd>
+</dl>
+
+<a name="helpers"></a>
+
+## helpers
+Handlebars helpers for `bootprint-json-schema`
+
+**Kind**: global variable  
+
+* [helpers](#helpers)
+    * [.json_schema__datatype(value)](#helpers.json_schema__datatype) ⇒ <code>String</code>
+    * [.json_schema__range(range)](#helpers.json_schema__range)
+
+<a name="helpers.json_schema__datatype"></a>
+
+### helpers.json_schema__datatype(value) ⇒ <code>String</code>
 Returns a descriptive string for a datatype
 
-**Kind**: global function  
+**Kind**: static method of [<code>helpers</code>](#helpers)  
 **Returns**: <code>String</code> - a string like <code>string[]</code> or <code>object[][]</code>  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>object</code> | a json-schema datatype-object |
+
+<a name="helpers.json_schema__range"></a>
+
+### helpers.json_schema__range(range)
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| range |  | a json-schema object with minimum, maximum, exclusiveMinimum, exclusiveMaximum |
+| [range.minimum] | <code>number</code> |  |
+| [range.maximum] | <code>number</code> |  |
+| [range.type] | <code>string</code> | the json-type (integer, or number) |
+| [range.minimumExclusive] | <code>boolean</code> |  |
+| [range.maximumExclusive] | <code>boolean</code> |  |
+
+<a name="numericRange"></a>
+
+## numericRange(range) ⇒ <code>\*</code>
+Render a range for numeric types (integer, number)
+
+**Kind**: global function  
 
 | Param |
 | --- |
-| value | 
+| range | 
+
+<a name="stringLengthRange"></a>
+
+## stringLengthRange(range)
+Render string length restrictions
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| range |  | 
+| range.maxLength | <code>number</code> | 
+| range.minLength | <code>number</code> | 
 
 
 
@@ -774,9 +928,9 @@ Returns a descriptive string for a datatype
 ## Main LessCSS-files
 
 * [highlight.js@9.12.0/styles/default.css](https://github.com/isagalaev/highlight.js/blob/v9.12.0/styles/default.css)  
-* [bootprint-base@2.0.0-rc.1/less/main.less](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/less/main.less)  
-* [bootprint-json-schema@1.1.0/less/theme.less](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/less/theme.less)  
-* [bootprint-json-schema@1.1.0/less/variables.less](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/less/variables.less)  
+* [bootprint-base@2.0.0-rc.2/less/main.less](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/less/main.less)  
+* [bootprint-json-schema@2.0.0-rc.1/less/theme.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/less/theme.less)  
+* [bootprint-json-schema@2.0.0-rc.1/less/variables.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/less/variables.less)  
     
 ## LessCSS include paths
 

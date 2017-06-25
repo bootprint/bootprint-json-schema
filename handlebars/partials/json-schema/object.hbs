@@ -1,0 +1,82 @@
+{{#if (json_schema__could_be_of_type 'object')}}
+
+    {{#with (json_schema__count_range minProperties maxProperties 'property' 'properties') as | text |}}
+        {{#if text}}
+            {{#>json-schema/util/section sections='minProperties, maxProperties' title='Object Size'}}
+                {{text}}
+            {{/json-schema/util/section}}
+        {{/if}}
+    {{/with}}
+
+    {{#if required}}
+        {{#>json-schema/util/section sections='required' title='Required Properties'}}
+            {{#json_schema__enumerate required}}<code>{{.}}</code>{{/json_schema__enumerate}}
+        {{/json-schema/util/section}}
+    {{/if}}
+
+    {{#if properties}}
+        {{#>json-schema/util/section sections='properties' title='Properties'}}
+            {{#each properties}}
+                <div class="json-schema--subschema" data-property-name="{{htmlId @key}}">
+                    <div class="json-schema--subschema-header">
+                        {{@key}}
+                        {{#if (json_schema__is_required .. @key)}}
+                            <span class="json-schema--required">required</span>{{/if}}
+                    </div>
+                    {{>json-schema/schema .}}
+                </div>
+            {{/each}}
+        {{/json-schema/util/section}}
+    {{/if}}
+
+    {{#if patternProperties}}
+        {{#>json-schema/util/section sections='patternProperties' title='Pattern Properties'}}
+            {{#each patternProperties}}
+                <div class="json-schema--subschema" data-property-pattern="{{htmlId @key}}">
+                    <div class="json-schema--subschema-header">{{>json-schema/util/regex @key}}</div>
+                    {{>json-schema/schema .}}
+                </div>
+            {{/each}}
+        {{/json-schema/util/section}}
+    {{/if}}
+
+    {{#if additionalProperties}}
+        {{#>json-schema/util/section sections='additionalProperties' title='Additional Properties'}}
+            <div class="json-schema--subschema">
+                {{>json-schema/schema additionalProperties}}
+            </div>
+        {{/json-schema/util/section}}
+    {{/if}}
+
+    {{#if dependencies}}
+        {{#>json-schema/util/section sections='dependencies' title='Dependencies'}}
+            {{#each dependencies}}
+                {{#if (json_schema__is_array .)}}
+                {{! property dependency}}
+                    <div class="json-schema--subschema">
+                        <div class="json-schema--subschema-header">If <code>{{@key}}</code> is a property,</div>
+                        {{#json_schema__enumerate .}}<code>{{.}}</code>{{/json_schema__enumerate}}
+                        must exist as properties as well
+                    </div>
+                {{else}}
+                {{! scgena dependency}}
+                    <div class="json-schema--subschema">
+                        <div class="json-schema--subschema-header">If <code>{{@key}}</code> is a property, the entire object must also match</div>
+                        {{>json-schema/schema .}}
+                    </div>
+
+                {{/if}}
+            {{/each}}
+        {{/json-schema/util/section}}
+    {{/if}}
+
+
+    {{#if propertyNames}}
+        {{#>json-schema/util/section sections='propertyNames' title='Property Names'}}
+            <div class="json-schema--subschema">
+                {{>json-schema/schema propertyNames}}
+            </div>
+        {{/json-schema/util/section}}
+    {{/if}}
+
+{{/if}}

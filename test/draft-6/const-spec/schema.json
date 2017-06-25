@@ -1,0 +1,21 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "description": "schema to test enums",
+  "definitions": {
+    "stringConst": {
+      "type": "string",
+      "const": "abc"
+    },
+    "numberConst": {
+      "type": "number",
+      "const": 1
+    },
+    "objectConst": {
+      "type": "object",
+      "const": {
+        "a": 1
+      }
+    }
+  }
+}

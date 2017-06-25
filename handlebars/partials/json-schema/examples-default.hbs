@@ -1,0 +1,22 @@
+{{#json_schema__if_version 'draft-04'}}
+    {{>json-schema/draft-04/default .}}
+{{else}}
+    {{#if (json_schema__has_any . 'examples' 'default')}}
+        {{#>json-schema/util/section sections='default, examples' title='Default and Examples'}}
+            <div class="json-schema--values">
+                {{#if default}}
+                    <div class="json-schema--value-item primary">
+                        <div class="header">Default</div>
+                        {{>json-schema/util/value default}}
+                    </div>
+                {{/if}}
+                {{#each examples}}
+                    <div class="json-schema--value-item">
+                        <div class="header">Example</div>
+                        {{>json-schema/util/value .}}
+                    </div>
+                {{/each}}
+            </div>
+        {{/json-schema/util/section}}
+    {{/if}}
+{{/json_schema__if_version}}

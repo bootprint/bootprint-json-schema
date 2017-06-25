@@ -1,6 +1,19 @@
 {{!Renders all subschemas}}
 {{#if definitions}}
     {{#eachSorted definitions}}
-        {{>json-schema/main-panel . title=@key anchor=true}}
+        <div id="{{json_schema__definition_id @key}}" class="panel panel-definition">
+                <div class="panel-heading clearfix">
+                    <div class="json-schema--panel-actions">
+                        <a class="json-schema--panel-top-link" title="Go to top" href="#">⤒ top</a>
+                    </div>
+                    <h3 class="panel-title">
+                        <span class="json-schema--definition-key">#/definitions/{{@key}}</span>
+                        {{#if title}}<span class="json-schema-definition-title">{{title}}</span>{{/if}}
+                    </h3>
+                </div>
+            <div class="panel-body">
+                {{>json-schema/schema . title=''}}
+            </div>
+        </div>
     {{/eachSorted}}
 {{/if}}

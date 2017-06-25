@@ -7,7 +7,7 @@ module.exports = function (builder) {
     .merge({
       'handlebars': {
         'partials': path.join(__dirname, 'handlebars/partials'),
-        'helpers': require.resolve('./handlebars/helpers.js')
+        'helpers': require.resolve('./handlebars/helpers/index.js')
       },
       'less': {
         'main': [

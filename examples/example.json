@@ -1,6 +1,7 @@
 {
   "id": "http://some.site.somewhere/entry-schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "fstab-schema",
   "description": "schema for an fstab entry",
   "type": "object",
   "required": [

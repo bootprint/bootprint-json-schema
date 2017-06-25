@@ -1,17 +1,11 @@
-{{!
-renders a json-schema "anyOf"-definition.
-}}
-<section class="json-schema-anyOf">
-    {{! Display ref (i.e. superclasses)}}
-    <dl>
-        {{#each .}}
-            <dt>
-                {{>json-schema/datatype}}
-            </dt>
-            <dd>
-                {{>json-schema/body $ref=""}}
-            </dd>
+{{#if anyOf}}
+    {{#>json-schema/util/section sections='anyOf' title='Must match any of'}}
+        <div class="json-schema--subschema-group">
+        {{#each anyOf}}
+            <div class="json-schema--subschema">
+                {{>json-schema/schema .}}
+            </div>
         {{/each}}
-    </dl>
-
-</section>
+        </div>
+    {{/json-schema/util/section}}
+{{/if}}

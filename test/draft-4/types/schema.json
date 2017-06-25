@@ -1,0 +1,43 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Schema for testing different types",
+  "type": "object",
+  "definitions": {
+    "simpleString": {
+      "type": "string"
+    },
+    "simpleArray": {
+      "type": "array"
+    },
+    "simpleInteger": {
+      "type": "integer"
+    },
+    "unspecified": {
+    },
+    "stringOrInteger": {
+      "type": [
+        "string",
+        "integer"
+      ]
+    },
+    "stringOrStringArray": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "multiTypeArray": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "integer"
+        ]
+      }
+    }
+  }
+}

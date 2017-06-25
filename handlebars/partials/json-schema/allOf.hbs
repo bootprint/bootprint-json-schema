@@ -1,20 +1,11 @@
-{{!
-renders a json-schema "allOf"-definition.
-}}
-<section class="json-schema-allOf">
-    {{! Display ref (i.e. superclasses)}}
-    <section class="json-schema-allOf-inherited">
-        <ul>
-            {{#each .}}
-                {{>json-schema/reference $ref}}
+{{#if allOf}}
+    {{#>json-schema/util/section sections='allOf' title='Must match all of'}}
+        <div class="json-schema--subschema-group">
+            {{#each allOf}}
+                <div class="json-schema--subschema">
+                    {{>json-schema/schema .}}
+                </div>
             {{/each}}
-        </ul>
-    </section>
-    <section class="json-schema-allOf-additional">
-        {{#each .}}
-            {{#unless $ref}}
-                {{>json-schema/body}}
-            {{/unless}}
-        {{/each}}
-    </section>
-</section>
+        </div>
+    {{/json-schema/util/section}}
+{{/if}}

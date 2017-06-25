@@ -1,0 +1,11 @@
+{{#if enum}}
+    {{#>json-schema/util/section sections='enum' title='Enum (allowed values)'}}
+        <div class="json-schema--values">
+            {{#each enum}}
+                <div class="json-schema--value-item">
+                    {{>json-schema/util/value .}}
+                </div>
+            {{/each}}
+        </div>
+    {{/json-schema/util/section}}
+{{/if}}

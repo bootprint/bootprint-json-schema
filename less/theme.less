@@ -1,155 +1,216 @@
 @import "labels.less";
 @import "panels.less";
+@import "wells.less";
+@import "navs.less";
+@import "navbar.less";
+@import "dropdowns.less";
+@import "buttons.less";
+@import "button-groups.less";
 
+
+@shiver-width: 7px;
+
+@keyframes json-schema--shiver {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: @shiver-width;
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: -@shiver-width;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.json-schema--target-shiver() {
+  &:target {
+    animation-duration: 0.3s;
+    animation-iteration-count: 2.5;
+    animation-timing-function: ease;
+    animation-name: json-schema--shiver;
+  }
+}
 
 .panel-definition {
-  .panel-variant(@definition-panel-border-color, @definition-panel-header-text-color, @definition-panel-header-bg-color, @definition-panel-border-color);
-}
+  .panel-default();
+  .json-schema--target-shiver();
 
-// Named sections
-.named-section(@title) {
-  &:before {
-    font-weight: bold;
-    color: @named-section-text-color;
-    text-transform: uppercase;
-    content: @title;
-    padding-bottom: 0.5em;
-    display: block;
-  }
-  &:not(:last-child) {
-    padding-bottom: 1.5em;
+  .panel-body {
+    .json-schema--inline-metadata()
   }
 }
 
-.json-schema-description {
-  .named-section(@msg-json-section-description);
-}
+.panel-main {
+  .panel-primary();
+  .json-schema--target-shiver();
 
-.json-schema-properties {
-  .named-section(@msg-json-section-properties);
-
-  dd:not(:last-child) {
-    padding-bottom: 1em;
-  }
-
-  dl {
-    margin: 0;
+  .panel-body {
+    .json-schema--inline-metadata()
   }
 }
 
-.json-schema-example {
-  .named-section(@msg-json-section-example);
-}
+.json-schema--subschema {
+  .well();
 
-.json-schema-array-items {
-  .named-section(@msg-json-section-items);
-}
-
-.json-schema-allOf-inherited {
-  .named-section(@msg-json-section-inherited);
-  ul {
-    .list-unstyled();
+  &-header {
+    margin: -19px -19px 10px;
+    padding: 2px;
+    border-bottom: 1px solid @well-border;
+    border-radius: 0;
   }
-}
 
-.json-schema-anyOf {
-  > dl {
-    border-left: 2px solid @definition-panel-inner-border-color;
-    padding-left: 1em;
-
-    dt:not(:first-child):before {
-      content: "or ";
-    }
-
-    dt:first-child:before {
-      content: "either ";
-    }
-
-  }
-}
-
-.json-schema-additionalProperties {
-  .named-section(@msg-json-section-additionalProperties);
-}
-
-.json-inner-schema {
-  .json-schema-properties,
-  .json-schema-array-items,
-  .json-schema-description,
-  .json-schema-example {
-    padding-left: 1em;
-    margin-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-left: 2px solid @definition-panel-inner-border-color;
-  }
-}
-
-.named-label(@name) {
-  &:before {
+  .json-schema--required {
     .label();
     .label-default();
-    content: @name;
+  }
+
+  .json-schema--inline-metadata()
+}
+
+.json-schema--inline-metadata() {
+  .json-schema--meta-data {
+    .clearfix();
+
+    margin-bottom: 1em;
+
+    .json-schema--title, .json-schema--description, .json-schema--description p {
+      display: inline;
+      font-size: 100%;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    > :after {
+      content: "-";
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    > :last-child:after {
+      content: "";
+    }
   }
 }
 
-.json-property-discriminator {
-  .named-label(@msg-json-discriminator)
-}
+.json-schema--schema {
+  section {
+    .make-row();
 
-.json-property-required {
-  .named-label(@msg-json-required)
-}
+    > .header, > .contents {
+      padding: 0.25em;
+    }
 
-.json-property-read-only {
-  .named-label(@msg-json-read-only)
-}
+    > .header {
+      .make-md-column(2);
+    }
 
-.json-property-pattern {
-  font-weight: lighter;
-  font-size: small;
-}
+    > .contents {
+      .make-md-column(10);
 
-.json-schema--regex {
-  &:before, &:after {
-    color: lighten(@text-color, 30%);
-    content: '/';
+      > .json-schema--subschema-group {
+        border-left: 0.5em solid darken(@well-border, 10%);
+        border-radius: 3px;
+        padding: 0 0 0 0em;
+
+        > .json-schema--subschema {
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+      }
+    }
   }
 }
 
-.json-property-type {
-  font-style: italic;
-  font-weight: 100;
+.json-schema--regex > b {
+  font-weight: bolder;
+  font-size: 120%;
+  font-weight: 800;
+  color: @text-color;
+  padding: 0.25em;
+  padding-right: 0.25em;
 }
 
-.json-property-format {
-  font-size: smaller;
+.json-schema--enum {
+  .list-inline();
 }
 
-.json-property-enum {
-  font-weight: lighter;
-  font-size: small;
+.json-schema--values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -1em;
 }
 
-.json-property-default-value {
-  font-weight: lighter;
-  font-size: small;
-  &:before {
-    content: '(default: "';
+.json-schema--value-item {
+  display: inline-block;
+  position: relative;
+  flex: 1;
+  flex-grow: 2;
+  flex-shrink: 2;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  background-color: @pre-bg;
+  border: 1px solid @pre-border-color;
+  > pre {
+    border: none;
+    background: none;
   }
+
+  > .header {
+    padding: 2px ((@line-height-computed - 1) / 2);
+    color: darken(@pre-bg, 50%);
+    border-bottom: 1px solid @pre-border-color;
+  }
+
+  &.primary > .header {
+    background-color: @brand-primary;
+    color: contrast(@brand-primary);
+  }
+
+}
+
+.json-schema--value {
+  .well()
+}
+
+.container > .json-schema--schema > .json-schema--meta-data {
+  > .json-schema--title {
+    .h1()
+  }
+}
+
+.json-schema--definition-key {
   &:after {
-    content: '")';
+    content: "-";
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  &:last-child:after {
+    content: "";
   }
 }
 
-.json-property-enum-item {
-  &:before, &:after {
-    content: "\""
-  }
-  font-weight: lighter;
-  font-size: small;
-
+.json-schema--section-links {
+  white-space: nowrap;
 }
 
-.json-schema--reference {
-  font-size: 90%;
+#json-schema--navigation-spacer {
+  height: @navbar-height + 10px;
+  overflow-x: auto;
+}
+
+.json-schema--panel-actions {
+  .btn-group();
+  .pull-right();
+}
+.json-schema--panel-top-link {
+  .btn();
+  .btn-default();
+  .btn-xs();
 }
