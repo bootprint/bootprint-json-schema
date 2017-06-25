@@ -44,20 +44,34 @@ function json_schema__datatype (value) {
  * @memberOf helpers
  */
 function json_schema__range (range) {
-  var hasMinimum = range.minimum || range.minimum === 0
-  var hasMaximum = range.maximum || range.maximum === 0
+  switch (range.type) {
+    case 'integer':
+    case 'number':
+      return numericRange(range)
+    case 'string':
+      return stringLengthRange(range)
+    default:
+      return ''
+  }
+}
+
+/**
+ * Render a range for numeric types (integer, number)
+ * @param range
+ * @returns {*}
+ */
+function numericRange (range) {
+  const hasMinimum = range.minimum || range.minimum === 0
+  const hasMaximum = range.maximum || range.maximum === 0
 
   if (!hasMinimum && !hasMaximum) {
     // There is no range
     return ''
   }
 
-  var numberSet = ''
-  if (range.type === 'integer') {
-    numberSet = '\u2208 \u2124' // ELEMENT OF - DOUBLE-STRUCK CAPITAL Z
-  } else if (range.type === 'number') {
-    numberSet = '\u2208 \u211D' // ELEMENT OF - DOUBLE-STRUCK CAPITAL R
-  }
+  let numberSet = range.type === 'integer'
+    ? '\u2208 \u2124' // ELEMENT OF - DOUBLE-STRUCK CAPITAL Z
+    : '\u2208 \u211D' // ELEMENT OF - DOUBLE-STRUCK CAPITAL R
 
   if (hasMinimum && !hasMaximum) {
     return util.format(', { x %s | x %s %d }',
@@ -78,4 +92,23 @@ function json_schema__range (range) {
       range.maximumExclusive ? '<' : '\u2264',
       range.maximum)
   }
+}
+
+/**
+ * Render string length restrictions
+ * @param range
+ * @param {number} range.maxLength
+ * @param {number} range.minLength
+ */
+function stringLengthRange (range) {
+  if (range.maxLength && range.minLength) {
+    return `, ${range.minLength} to ${range.maxLength} chars`
+  }
+  if (range.maxLength) {
+    return `, up to ${range.maxLength} chars`
+  }
+  if (range.minLength) {
+    return `, at least ${range.minLength} chars`
+  }
+  return ''
 }

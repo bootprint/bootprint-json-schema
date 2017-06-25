@@ -36,7 +36,7 @@
         {{/each}}
         }
         </span>
-{{~/if}}
+{{~/if~}}
 
 {{!-- min- and max-values --}}
 <span class="json-property-range" title="Value limits">
@@ -49,21 +49,6 @@
         <span class="json-property-default-value">{{~default}}</span>
     {{/if}}
 {{~/unless}}
-{{#if minLength}}
-    <span class="json-property-range" title="String length limits">
-        {{#if maxLength}}
-            ({{minLength}} to {{maxLength}} chars)
-        {{else}}
-            (at least {{minLength}} chars)
-        {{/if}}
-    </span>
-{{else}}
-    {{#if maxLength}}
-        <span class="json-property-range" title="String length limits">
-            (up to {{maxLength}} chars)
-        </span>
-    {{/if}}
-{{/if}}
 {{#if pattern}}
     <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">{{pattern}}</span></span>
 {{/if}}

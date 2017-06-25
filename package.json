@@ -26,8 +26,7 @@
   },
   "homepage": "https://github.com/bootprint/bootprint-json-schema",
   "dependencies": {
-    "bootprint-base": "^2.0.0-rc.1",
-    "lodash": "^4.17.4"
+    "bootprint-base": "^2.0.0-rc.1"
   },
   "devDependencies": {
     "bootprint-unit-testing": "^2.1.0",

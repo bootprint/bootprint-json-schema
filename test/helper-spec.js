@@ -26,10 +26,10 @@ describe('The Handlebars-helpers:', function () {
       expect(dt(null)).to.equal('')
     })
 
-    it('should return an empty string for composite schema, since they are rendered in  partials null and undefined gracefully', function () {
-      expect(dt({ anyOf: [] })).to.equal('')
-      expect(dt({ oneOf: [] })).to.equal('')
-      expect(dt({ allOf: [] })).to.equal('')
+    it('should return an empty string for null and undefined gracefully, as well as composite schema, since they are rendered in  partials ', function () {
+      expect(dt({anyOf: []})).to.equal('')
+      expect(dt({oneOf: []})).to.equal('')
+      expect(dt({allOf: []})).to.equal('')
     })
 
     it('should treat unspecific types as object', function () {
@@ -37,54 +37,84 @@ describe('The Handlebars-helpers:', function () {
     })
 
     it('should treat unspecific array types as object[]', function () {
-      expect(dt({ type: 'array' })).to.equal('object[]')
+      expect(dt({type: 'array'})).to.equal('object[]')
     })
 
     it('should treat arrays with unspecific types object[]', function () {
-      expect(dt({ type: 'array', items: {} })).to.equal('object[]')
+      expect(dt({type: 'array', items: {}})).to.equal('object[]')
     })
 
     it('should write type[] for specific arrays', function () {
-      expect(dt({ type: 'array', items: { type: 'string' } })).to.equal('string[]')
+      expect(dt({type: 'array', items: {type: 'string'}})).to.equal('string[]')
     })
 
     it('should write recurse multiple steps of array types', function () {
-      expect(dt({ type: 'array', items: { type: 'array', items: { type: 'string' } } })).to.equal('string[][]')
+      expect(dt({type: 'array', items: {type: 'array', items: {type: 'string'}}})).to.equal('string[][]')
     })
   })
 
   describe('the json_schema__range helper', function () {
     // Call the datatype-helper
     function range (obj) {
-      return run('{{{json_schema__range range}}}', { range: obj })
+      return run('{{{json_schema__range range}}}', {range: obj})
     }
 
     it('should handle empty ranges gracefully', function () {
       expect(range({})).to.equal('')
     })
 
+    it('should handle empty integer ranges gracefully', function () {
+      expect(range({ type: 'integer' })).to.equal('')
+    })
+
+    it('should handle empty number ranges gracefully', function () {
+      expect(range({ type: 'number' })).to.equal('')
+    })
+
+    it('should ignore minimum and maximum for non-numeric types', function () {
+      expect(range({type: 'string', minimum: 2, maximum: 3})).to.equal('')
+    })
+
     it('should render a range for only minimum (starting with coma)', function () {
-      expect(range({ minimum: 2, type: 'number' })).to.equal(', { x ∈ ℝ | x ≥ 2 }')
+      expect(range({minimum: 2, type: 'number'})).to.equal(', { x ∈ ℝ | x ≥ 2 }')
     })
 
     it('should render a range for only maximum (starting with coma)', function () {
-      expect(range({ maximum: 2, type: 'number' })).to.equal(', { x ∈ ℝ | x ≤ 2 }')
+      expect(range({maximum: 2, type: 'number'})).to.equal(', { x ∈ ℝ | x ≤ 2 }')
     })
 
     it('should render a range with minimum and maximum (starting with coma)', function () {
-      expect(range({ maximum: 2, minimum: 0, type: 'number' })).to.equal(', { x ∈ ℝ | 0 ≤ x ≤ 2 }')
+      expect(range({maximum: 2, minimum: 0, type: 'number'})).to.equal(', { x ∈ ℝ | 0 ≤ x ≤ 2 }')
+    })
+
+    it('should render a open range with minimumExclusive (starting with coma)', function () {
+      expect(range({minimum: 0, minimumExclusive: true, type: 'number'})).to.equal(', { x ∈ ℝ | x > 0 }')
+    })
+
+    it('should render a open range with maximumExclusive (starting with coma)', function () {
+      expect(range({maximum: 2, maximumExclusive: true, type: 'number'})).to.equal(', { x ∈ ℝ | x < 2 }')
     })
 
     it('should render a range with minimumExclusive and maximum (starting with coma)', function () {
-      expect(range({ maximum: 2, minimum: 0, minimumExclusive: true, type: 'number' })).to.equal(', { x ∈ ℝ | 0 < x ≤ 2 }')
+      expect(range({
+        maximum: 2,
+        minimum: 0,
+        minimumExclusive: true,
+        type: 'number'
+      })).to.equal(', { x ∈ ℝ | 0 < x ≤ 2 }')
     })
 
     it('should render a range with minimum and maximumExclusive (starting with coma)', function () {
-      expect(range({ maximum: 2, maximumExclusive: true, minimum: 0, type: 'number' })).to.equal(', { x ∈ ℝ | 0 ≤ x < 2 }')
+      expect(range({
+        maximum: 2,
+        maximumExclusive: true,
+        minimum: 0,
+        type: 'number'
+      })).to.equal(', { x ∈ ℝ | 0 ≤ x < 2 }')
     })
 
     it('should render the correct set-symbol for integers', function () {
-      expect(range({ type: 'integer', minimum: 0 })).to.equal(', { x ∈ ℤ | x ≥ 0 }')
+      expect(range({type: 'integer', minimum: 0})).to.equal(', { x ∈ ℤ | x ≥ 0 }')
     })
   })
 })
