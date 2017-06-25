@@ -18,7 +18,7 @@ This page describes the API of this Bootprint-module
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/templates/index.html.hbs">bootprint-base @ 1.0.0 / handlebars/templates/index.html.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/templates/index.html.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/templates/index.html.hbs</a>        </td>
     </tr>
         <tr>
             <th>Structure</th>
@@ -206,7 +206,7 @@ Renders the main-schema as panel and the sub-schemas below.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/footer.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/footer.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/footer.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/footer.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -232,7 +232,7 @@ This partial is displayed at the bottom of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/header.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/header.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/header.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/header.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -258,7 +258,7 @@ This partial is displayed at the top of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/html-head-extra.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/html-head-extra.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/html-head-extra.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/html-head-extra.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -283,7 +283,7 @@ This partial is added inside the <head>-tag, after the
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/html-head.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/html-head.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/html-head.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/html-head.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -316,7 +316,7 @@ This partial is rendered into the `<head>`-tag of the page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/javascript-libs.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/javascript-libs.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/javascript-libs.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/javascript-libs.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -338,7 +338,7 @@ This partial is rendered below the `footer`-partial of the page. You can include
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/partials/base/title.hbs">bootprint-base @ 1.0.0 / handlebars/partials/base/title.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/partials/base/title.hbs">bootprint-base @ 2.0.0-rc.1 / handlebars/partials/base/title.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -681,7 +681,7 @@ Renders the properties of an `object`
 
 # Helpers 
 
-(from [bootprint-base@1.0.0/handlebars/helpers.js](https://github.com/bootprint/bootprint-base/blob/v1.0.0/handlebars/helpers.js))
+(from [bootprint-base@2.0.0-rc.1/handlebars/helpers.js](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/handlebars/helpers.js))
 
 ## Members
 
@@ -773,8 +773,8 @@ Returns a descriptive string for a datatype
 
 ## Main LessCSS-files
 
-* [highlight.js@8.9.1/styles/default.css](https://github.com/isagalaev/highlight.js/blob/v8.9.1/styles/default.css)  
-* [bootprint-base@1.0.0/less/main.less](https://github.com/bootprint/bootprint-base/blob/v1.0.0/less/main.less)  
+* [highlight.js@9.12.0/styles/default.css](https://github.com/isagalaev/highlight.js/blob/v9.12.0/styles/default.css)  
+* [bootprint-base@2.0.0-rc.1/less/main.less](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.1/less/main.less)  
 * [bootprint-json-schema@1.1.0/less/theme.less](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/less/theme.less)  
 * [bootprint-json-schema@1.1.0/less/variables.less](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/less/variables.less)  
     
