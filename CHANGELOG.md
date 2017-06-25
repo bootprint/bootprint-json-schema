@@ -2,6 +2,17 @@
 
 
 <a name="current-release"></a>
+# Version 2.0.0-rc.1 (Sun, 25 Jun 2017 22:01:12 GMT)
+
+* [01e6d2b](https://github.com/bootprint/bootprint-json-schema/commit/01e6d2b) Bump version of bootprint-base to get better helper docs - Nils Knappmeier
+* [3867ef7](https://github.com/bootprint/bootprint-json-schema/commit/3867ef7) Measures to increase test-coverage - Nils Knappmeier
+* [1b5605f](https://github.com/bootprint/bootprint-json-schema/commit/1b5605f) BREAKING: Remove unused helpers 'json_schema__subschema_name' and 'json_schema__resolve_ref' - Nils Knappmeier
+* [287afa2](https://github.com/bootprint/bootprint-json-schema/commit/287afa2) Remove empty obsolete test-file - Nils Knappmeier
+* [814d86a](https://github.com/bootprint/bootprint-json-schema/commit/814d86a) BREAKING: Refactor helper names to be valid JavaScript function names - Nils Knappmeier
+* [038a06b](https://github.com/bootprint/bootprint-json-schema/commit/038a06b) Bump dependency versions and adapt, update docs and chore - Nils Knappmeier
+* [9f42f0e](https://github.com/bootprint/bootprint-json-schema/commit/9f42f0e) Prepare next version - Nils Knappmeier
+* [0225c10](https://github.com/bootprint/bootprint-json-schema/commit/0225c10) Update dependencies to enable Greenkeeper 🌴 (#11) - greenkeeper[bot]
+
 # Version 1.1.0 (Mon, 13 Feb 2017 21:33:41 GMT)
 
 * [c83458c](https://github.com/bootprint/bootprint-json-schema/commit/c83458c) Add string pattern (#10) - Alex Collins
