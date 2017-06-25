@@ -754,17 +754,70 @@ The helper will set the following @-values according to the Handlebars documenta
 
 (from [bootprint-json-schema@1.1.0/handlebars/helpers.js](https://github.com/bootprint/bootprint-json-schema/blob/v1.1.0/handlebars/helpers.js))
 
-<a name="dataType"></a>
+<a name="helpers"></a>
 
-## dataType(value) ⇒ <code>String</code>
+## helpers
+Handlebars helpers for `bootprint-json-schema`
+
+**Kind**: global variable  
+
+* [helpers](#helpers)
+    * [.json_schema__datatype(value)](#helpers.json_schema__datatype) ⇒ <code>String</code>
+    * [.json_schema__subschema_name(url)](#helpers.json_schema__subschema_name) ⇒ <code>\*</code>
+    * [.json_schema__resolve_ref(reference)](#helpers.json_schema__resolve_ref)
+    * [.json_schema__range(range)](#helpers.json_schema__range)
+
+<a name="helpers.json_schema__datatype"></a>
+
+### helpers.json_schema__datatype(value) ⇒ <code>String</code>
 Returns a descriptive string for a datatype
 
-**Kind**: global function  
+**Kind**: static method of [<code>helpers</code>](#helpers)  
 **Returns**: <code>String</code> - a string like <code>string[]</code> or <code>object[][]</code>  
+**Access**: public  
 
-| Param |
-| --- |
-| value | 
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>object</code> | a json-schema datatype-object |
+
+<a name="helpers.json_schema__subschema_name"></a>
+
+### helpers.json_schema__subschema_name(url) ⇒ <code>\*</code>
+Extract then name of a subschema from a $ref property
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| url | <code>string</code> | 
+
+<a name="helpers.json_schema__resolve_ref"></a>
+
+### helpers.json_schema__resolve_ref(reference)
+Resolve a (local) json-schema-
+
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| reference | <code>string</code> | 
+
+<a name="helpers.json_schema__range"></a>
+
+### helpers.json_schema__range(range)
+**Kind**: static method of [<code>helpers</code>](#helpers)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| range |  | a json-schema object with minimum, maximum, exclusiveMinimum, exclusiveMaximum |
+| [range.minimum] | <code>number</code> |  |
+| [range.maximum] | <code>number</code> |  |
+| [range.type] | <code>string</code> | the json-type (integer, or number) |
+| [range.minimumExclusive] | <code>boolean</code> |  |
+| [range.maximumExclusive] | <code>boolean</code> |  |
 
 
 

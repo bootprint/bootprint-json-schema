@@ -12,10 +12,10 @@ function run (template, json) {
 }
 
 describe('The Handlebars-helpers:', function () {
-  describe('the json-schema--datatype helper', function () {
-        // Call the datatype-helper
+  describe('the json_schema__datatype helper', function () {
+    // Call the datatype-helper
     function dt (obj) {
-      return run('{{json-schema--datatype type}}', {type: obj})
+      return run('{{json_schema__datatype type}}', {type: obj})
     }
 
     it('should handle undefined gracefully', function () {
@@ -53,10 +53,10 @@ describe('The Handlebars-helpers:', function () {
     })
   })
 
-  describe('the json-schema--datatype helper', function () {
+  describe('the json_schema__range helper', function () {
     // Call the datatype-helper
     function range (obj) {
-      return run('{{{json-schema--range range}}}', { range: obj })
+      return run('{{{json_schema__range range}}}', { range: obj })
     }
 
     it('should handle empty ranges gracefully', function () {

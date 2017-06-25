@@ -11,7 +11,7 @@
     {{~#if $ref}}
         {{~>json-schema/reference $ref}}
     {{~else}}
-        {{~json-schema--datatype .}}
+        {{~json_schema__datatype .}}
     {{~/if}}
 </span>
 {{~#if format}}
@@ -40,7 +40,7 @@
 
 {{!-- min- and max-values --}}
 <span class="json-property-range" title="Value limits">
-    {{~json-schema--range . ~}}
+    {{~json_schema__range . ~}}
 </span>
 
 {{!-- Default values (for non-enum types) --}}
@@ -65,5 +65,5 @@
     {{/if}}
 {{/if}}
 {{#if pattern}}
-    <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">{{pattern}}</span>
+    <span class="json-property-pattern" title="String pattern">, must match <span class="json-schema--regex">{{pattern}}</span></span>
 {{/if}}
