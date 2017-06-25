@@ -8,8 +8,6 @@ var util = require('util')
  */
 module.exports = {
   json_schema__datatype,
-  json_schema__subschema_name,
-  json_schema__resolve_ref,
   json_schema__range
 }
 
@@ -32,48 +30,6 @@ function json_schema__datatype (value) {
     return json_schema__datatype(value.items || {}) + '[]'
   }
   return value.type
-}
-
-/**
- * Extract then name of a subschema from a $ref property
- * @param {string} url
- * @returns {*}
- * @access public
- * @memberOf helpers
- */
-function json_schema__subschema_name (url) {
-  return url.replace('#/definitions/', '')
-}
-
-/**
- * Resolve a (local) json-schema-
- * @param {string} reference
- * @access public
- * @memberOf helpers
- */
-function json_schema__resolve_ref (reference, options) {
-  reference = reference.trim()
-  if (reference.lastIndexOf('#', 0) < 0) {
-    // eslint-disable-next-line no-console
-    console.warn('Remote references not supported yet. Reference must start with "#" (but was ' + reference + ')')
-    return {}
-  }
-  var components = reference.split('#')
-  // var url = components[0]
-  var hash = components[1]
-  var hashParts = hash.split('/')
-  // TODO : Download remote json from url if url not empty
-  var current = options.data.root
-  hashParts.forEach(function (hashPart) {
-    // Traverse schema from root along the path
-    if (hashPart.trim().length > 0) {
-      if (typeof current === 'undefined') {
-        throw new Error('Reference \'' + reference + '\' cannot be resolved. \'' + hashPart + '\' is undefined.')
-      }
-      current = current[hashPart]
-    }
-  })
-  return current
 }
 
 /**
