@@ -1,4 +1,7 @@
-{{#json_schema__if_version 'draft-04'}}
+{{!--
+Render the "examples" and "default" keywords of a json-schema
+@this {object} the json-schema
+--}}{{#json_schema__if_version 'draft-04'}}
     {{>json-schema/draft-04/default .}}
 {{else}}
     {{#if (json_schema__has_any . 'examples' 'default')}}

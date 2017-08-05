@@ -1,3 +1,7 @@
+{{!--
+Render the allOf keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if allOf}}
     {{#>json-schema/util/section sections='allOf' title='Must match all of'}}
         <div class="json-schema--subschema-group">

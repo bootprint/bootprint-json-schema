@@ -1,3 +1,7 @@
+{{!--
+Render the "type" keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if type}}
     {{#>json-schema/util/section sections='type' title='Type'}}
         {{#each type}}

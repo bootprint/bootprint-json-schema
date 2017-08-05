@@ -7,6 +7,15 @@
 
 > Converts a json-schema into a static html page
 
+This bootprint-module can be used to convert a json-schema to a human-readbable HTML.
+
+## Features
+
+* Complete support for the keywords from JSON-schema [draft-04](https://tools.ietf.org/html/draft-fge-json-schema-validation-00) and [draft-06](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)
+* Links to the specification for all keywords
+* Full test coverage of JavaScript-code
+* Lots of tests to cover Handlebars templates and partials
+
 
 
 # Installation
@@ -22,7 +31,7 @@ npm -g install bootprint-json-schema
 After installing the package globally, you can run bootprint with the command
 
 ```bash
-bootprint bootprint-json-schema https://raw.githubusercontent.com/bootprint/bootprint-json-schema/v2.0.0-rc.1/examples/example.json target
+bootprint json-schema https://raw.githubusercontent.com/bootprint/bootprint-json-schema/v2.0.0-rc.1/examples/example.json target
 ```
 
 `example.json` can be found in [examples/example.json](examples/example.json) in this project.

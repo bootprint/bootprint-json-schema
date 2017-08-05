@@ -1,3 +1,7 @@
+{{!--
+Render the oneOf keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if oneOf}}
     {{#>json-schema/util/section sections='oneOf' title='Must match exactly one of'}}
         <div class="json-schema--subschema-group">

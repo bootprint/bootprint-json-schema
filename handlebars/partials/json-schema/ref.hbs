@@ -1,1 +1,5 @@
+{{!--
+Renders a single json-reference
+@this {object} the object containing the $ref-property
+--}}
 <a class="json-schema--reference" href="#{{json_schema__definition_id (json_schema__subschema_name $ref)}}">{{$ref}}</a>

@@ -1,5 +1,5 @@
 {{!--
-    Render default values as in draft-04 (without "examples")
+Render default values as in draft-04 (without "examples")
 --}}
 {{#if (json_schema__has_any . 'default')}}
     {{#>json-schema/util/section sections='default' title='Default value'}}

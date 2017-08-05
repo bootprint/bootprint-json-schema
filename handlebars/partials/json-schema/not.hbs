@@ -1,3 +1,7 @@
+{{!--
+Render the not keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if not}}
     {{#>json-schema/util/section sections='not' title='Must not match'}}
         <div class="json-schema--subschema">

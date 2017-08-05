@@ -1,3 +1,7 @@
+{{!--
+Render the "const" keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if const}}
     {{#>json-schema/util/section sections='const' title='Constant value'}}
         {{>json-schema/util/value const}}

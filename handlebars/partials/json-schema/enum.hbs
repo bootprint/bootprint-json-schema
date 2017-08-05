@@ -1,4 +1,7 @@
-{{#if enum}}
+{{!--
+Render the enum keyword of a json-schema
+@this {object} the json-schema
+--}}{{#if enum}}
     {{#>json-schema/util/section sections='enum' title='Enum (allowed values)'}}
         <div class="json-schema--values">
             {{#each enum}}

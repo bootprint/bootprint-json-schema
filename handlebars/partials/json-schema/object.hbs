@@ -1,3 +1,7 @@
+{{!--
+Render the object-specific keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if (json_schema__could_be_of_type 'object')}}
 
     {{#with (json_schema__count_range minProperties maxProperties 'property' 'properties') as | text |}}

@@ -1,3 +1,7 @@
+{{!--
+Render the number-specific keywords of a json-schema
+@this {object} the json-schema
+--}}
 {{#if (json_schema__could_be_numeric)}}
     {{#with (json_schema__number_range .) as | text |}}
         {{#if text}}

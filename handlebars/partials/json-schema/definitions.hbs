@@ -1,5 +1,7 @@
-{{!Renders all subschemas}}
-{{#if definitions}}
+{{!--
+Renders the defintiions-property of the main-schema
+@this {object} the json-schema
+--}}{{#if definitions}}
     {{#eachSorted definitions}}
         <div id="{{json_schema__definition_id @key}}" class="panel panel-definition">
                 <div class="panel-heading clearfix">

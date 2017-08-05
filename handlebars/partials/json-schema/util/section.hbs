@@ -1,9 +1,11 @@
 {{!--
-   Helper partial to render a restriction (array, numeric etc).
-   Use as block-partial
+Helper partial to render a section for a keyword (items, type, properties etc).
+The partial is used as block-partial and the @partial-block is the contents of the
+section.
 
-   @param {string} sections a coma-separated list of section names (i.e. items, additionalItems)
-   @param {string} title a title for the restrictions
+@param {string} sections a coma-separated list of section names (i.e. items, additionalItems)
+@param {string} title a title for the restrictions
+@public
 --}}
 <section class="json-schema--section" data-keywords="{{sections}}">
     <div class="header" title="{{title}}">

@@ -1,3 +1,7 @@
+{{!--
+Render the "format" keyword of a json-schema
+@this {object} the json-schema
+--}}
 {{#if format}}
     {{#>json-schema/util/section sections='format' title='Format'}}
         {{format}} ({{json_schema__doclink 'formats' format}})

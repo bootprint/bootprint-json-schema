@@ -1,5 +1,9 @@
 /* eslint-disable camelcase */
 
+/**
+ * Default Handlebars-helpers for `bootprint-json-schema`
+ * @name helpers
+ */
 module.exports = {
   json_schema__doclink,
   json_schema__datatype,
@@ -31,10 +35,18 @@ const schemaByUrl = {
 }
 
 /**
- * Render a link to a json-schema docs section from the json-schema documentation
+ * Render a link to a json-schema docs section from the json-schema documentation.
+ * If the section does not exist, it is assumed to be a vendor extension.
+ * The mapping of names to section numbers can be found in the version-specific helper
+ * files.
+ *
  * @param {string} type the type of section (keywords, formats)
  * @param {string} sectionName the section name (e.g. items)
  * @param {object} options the Handlebars options
+ * @return {string|Handlebars.SafeString} a SafeString containing a link to the documentation or
+ *   'vender extension' if there is no section of the given name
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__doclink (type, sectionName, options) {
   let version = determineVersion(options)
@@ -52,6 +64,8 @@ function json_schema__doclink (type, sectionName, options) {
  * Executes the helper-block, if the version matches any of the
  * specified target versions
  * @param {...string} targetVersions a list of schema-versions to match against (varargs)
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__if_version (...targetVersions /*, options */) {
   const options = targetVersions[targetVersions.length - 1]
@@ -65,11 +79,11 @@ function json_schema__if_version (...targetVersions /*, options */) {
 }
 
 /**
- * Returns a formal string that can be used as generic parameter for an array.
+ * Returns the datatype of a schema as short formal string like `array<string|integer>`
  *
  * @param {object} schema a json-schema
  * @param {string|string[]} types one or more types of potentially multiple types in the schema that should be used right now.
- * @returns {String} a string like <code>string[]</code> or <code>object[][]</code>
+ * @returns {String} a string like `array<string|integer>`
  * @access public
  * @memberOf helpers
  */
@@ -99,12 +113,15 @@ function json_schema__datatype (schema, types) {
 /**
  * Return a string for the numeric range restriction of the given schema
  * (as determined by `minimum`, `maximum`, `exclusiveMinimum` and `exclusiveMaximum`
- * properties)
+ * properties).
  *
  * The implementation is dispatched to version-specific behavior because `draft-04`
  * and `draft-05` differ from `draft-06`
  * @param {object} schema the current (sub-)schema
  * @param {object} options the Handlebars options
+ * @returns {string} a string like `1 < x < 2` or `x ≤ 5`
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__number_range (schema, options) {
   let {json_schema__number_range} = versionDispatch[determineVersion(options)]
@@ -120,6 +137,7 @@ function json_schema__number_range (schema, options) {
  *
  * @param options the Handlebars options-object
  * @returns {string}
+ * @access private
  */
 function determineVersion (options) {
   if (!options || !options.data || !options.data.root) {
@@ -132,19 +150,23 @@ function determineVersion (options) {
 /**
  * Compute the element-id for a definition panel
  * @param {string} name the name of the definition (the key within the definitions object)
- * @returns {string}
+ * @returns {string} an id without invalid characters for HTML-ids
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__definition_id (name) {
   return `definitions-${htmlId(name)}`
 }
 
 /**
- * Returns a prose-description of a number of things (e.g. "at least one item")
+ * Returns a prose-description of a number of things (e.g. "at least one item", "2 to 5 items")
  * @param {number=} min the lower bound
  * @param {number=} max the upper bound
  * @param {string} singular the "thing" in it singular form
  * @param {string} plural the "thing" it its plural form
- * @returns {string|null} a prose-description or "null" if there is no range
+ * @returns {string|null} a prose-description or `null` if there is no range
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__count_range (min, max, singular, plural) {
   if (min == null && max == null) return null
@@ -173,11 +195,13 @@ function json_schema__subschema_name (url) {
 }
 
 /**
- * Returns "true", it the given propertyName is among the required properties
+ * Returns "true", if the given propertyName is among the required properties
  * of a schema
- * @param schema
- * @param propertyName
- * @returns {boolean}
+ * @param {object} schema the json-schema to check for required properties of
+ * @param {string} propertyName the property the name of the property
+ * @returns {boolean} true, if the given propertyName is required
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__is_required (schema, propertyName) {
   return schema.required && schema.required.indexOf(propertyName) >= 0
@@ -189,6 +213,9 @@ function json_schema__is_required (schema, propertyName) {
  * or if it is not specified.
  *
  * @this {undefined|string|string[]} the json-schema oject
+ * @return {boolean} true, if the type could be numeric
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__could_be_numeric () {
   const couldBeA = json_schema__could_be_of_type.bind(this)
@@ -196,12 +223,15 @@ function json_schema__could_be_numeric () {
 }
 
 /**
- * Return true, if the type is a string or *could be* a string
+ * Return true, if the dataType of a schema could be a given type
  *
- * The type *could be* string, if it is an array that includes number or integer,
- * or if it is not specified.
+ * This includes an undefined `type` property, an array `type`-property that includes
+ * the checke values and a string `type'-property that equals the checked value.
  *
- * @param {string} type  the type property of the schema
+ * @param {string} type the type to check the schema against
+ * @returns {boolean} true, if the type of the schema could be the parameter
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__could_be_of_type (type) {
   const actualType = this.type
@@ -218,6 +248,8 @@ function json_schema__could_be_of_type (type) {
  *
  * @param {string} list a coma-separated list of strings
  * @return {string[]} the list items as array
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__split_coma (list) {
   return list.split(',').map(item => item.trim())
@@ -227,20 +259,34 @@ function json_schema__split_coma (list) {
  * Returns true, if the value is an array
  * @param {*} value the value
  * @returns {boolean} true, if the value is an array
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__is_array (value) {
   return Array.isArray(value)
 }
 
-function json_schema__has_any (schema, ...properties) {
-  const realProperties = properties.slice(0, properties.length - 1)
-  return realProperties.find(keyword => schema[keyword] != null)
+/**
+ * Checks, if the given schema contains any of the provided keywords (like "type" or "items")
+ *
+ * @param {object} schema a json-schema
+ * @param {...string} keywords a list of keywords to check again
+ * @returns {boolean} true, if any of the keywords exists in the schema
+ * @access public
+ * @memberOf helpers
+ */
+function json_schema__has_any (schema, ...keywords) {
+  // remove Handlebars options from keywords before searching
+  return !!keywords.slice(0, keywords.length - 1)
+    .find(keyword => schema[keyword] != null)
 }
 
 /**
  * Convert an array into a prose-enumeration
  * @param {string[]} items an array of strings (e.g. ['a','b','c'])
- * @return an written enumeration (a,b and c)
+ * @return {string} a written enumeration (a,b and c)
+ * @access public
+ * @memberOf helpers
  */
 function json_schema__enumerate (items, options) {
   return items.map((item, index, array) => {

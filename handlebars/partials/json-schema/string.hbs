@@ -1,3 +1,7 @@
+{{!--
+Render the string-specific keywords of a json-schema
+@this {object} the json-schema
+--}}
 {{#with (json_schema__count_range minLength maxLength 'character' 'characters') as | text |}}
     {{#if text}}
         {{#>json-schema/util/section sections='minLength, maxLength' title='String length'}}

@@ -1,4 +1,7 @@
-{{#if anyOf}}
+{{!--
+Render the anyOf keyword of a json-schema
+@this {object} the json-schema
+--}}{{#if anyOf}}
     {{#>json-schema/util/section sections='anyOf' title='Must match any of'}}
         <div class="json-schema--subschema-group">
         {{#each anyOf}}
