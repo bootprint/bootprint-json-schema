@@ -1,0 +1,40 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Title and descriptions",
+  "description": "schema to test title and descriptions",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "The name of this instance",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 10
+    },
+    "age": {
+      "title": "The age",
+      "description": "Number of **years** from birth to the current date",
+      "type": "integer"
+    },
+    "credentials": {
+      "$ref": "#/definitions/credentials"
+    }
+  },
+
+  "definitions": {
+    "credentials": {
+      "title": "User credentials",
+      "description": "The credentials contain a user and a password and can be used to log in to the system",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+
+      }
+    }
+  }
+}

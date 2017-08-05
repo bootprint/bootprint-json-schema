@@ -1,0 +1,12 @@
+{{!--
+    Render default values as in draft-04 (without "examples")
+--}}
+{{#if (json_schema__has_any . 'default')}}
+    {{#>json-schema/util/section sections='default' title='Default value'}}
+        <div class="json-schema--values">
+            <div class="json-schema--value-item primary">
+                {{>json-schema/util/value default}}
+            </div>
+        </div>
+    {{/json-schema/util/section}}
+{{/if}}

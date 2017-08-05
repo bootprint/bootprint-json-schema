@@ -1,0 +1,14 @@
+{{#with (json_schema__count_range minLength maxLength 'character' 'characters') as | text |}}
+    {{#if text}}
+        {{#>json-schema/util/section sections='minLength, maxLength' title='String length'}}
+            {{text}}
+        {{/json-schema/util/section}}
+    {{/if}}
+{{/with}}
+
+{{#if pattern}}
+    {{#>json-schema/util/section sections='pattern' title='String Pattern'}}
+        x must match {{>json-schema/util/regex pattern}}
+    {{/json-schema/util/section}}
+
+{{/if}}

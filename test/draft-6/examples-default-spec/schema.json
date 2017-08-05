@@ -1,0 +1,138 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "description": "schema to test combinations of schemas",
+  "definitions": {
+    "integer": {
+      "type": "integer",
+      "default": 2,
+      "examples": [
+        1,
+        5,
+        8,
+        9
+      ]
+    },
+    "string": {
+      "type": "string",
+      "default": "omega",
+      "examples": [
+        "alpha",
+        "beta",
+        "gamma",
+        "delta"
+      ]
+    },
+    "complex": {
+      "type": "object",
+      "default": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      },
+      "examples": [
+        {
+          "type": "string",
+          "examples": [
+            "alpha",
+            "beta",
+            "gamma",
+            "delta"
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    "long complex": {
+      "type": "object",
+      "default": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      },
+      "examples": [
+        {
+          "type": "string",
+          "examples": [
+            "alpha",
+            "beta",
+            "gamma",
+            "delta"
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "type": "integer",
+          "examples": [
+            1,
+            5,
+            8,
+            9
+          ]
+        }
+      ]
+    }
+
+  }
+}

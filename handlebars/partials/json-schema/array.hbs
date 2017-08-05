@@ -1,0 +1,55 @@
+{{#if (json_schema__could_be_of_type 'array')}}
+
+    {{#if uniqueItems}}
+        {{#>json-schema/util/section sections='uniqueItems' title='Unique Items'}}
+            Array items must be unique
+        {{/json-schema/util/section}}
+    {{/if}}
+
+    {{#with (json_schema__count_range minItems maxItems 'item' 'items') as | text |}}
+        {{#if text}}
+            {{#>json-schema/util/section sections='minItems, maxItems' title='Array length'}}
+                {{text}}
+            {{/json-schema/util/section}}
+        {{/if}}
+    {{/with}}
+
+
+    {{#if items}}
+        {{#if (json_schema__is_array items)}}
+            {{#>json-schema/util/section sections='items' title='Items'}}
+                {{#each items}}
+                    <div class="json-schema--subschema">
+                        <div class="json-schema--subschema-header">at index {{@index}}</div>
+                        {{>json-schema/schema .}}
+                    </div>
+                {{/each}}
+            {{/json-schema/util/section}}
+
+            {{#if additionalItems}}
+                {{#>json-schema/util/section sections='additionalItems' title='Additional Items'}}
+                    <div class="json-schema--subschema">
+                        {{>json-schema/schema additionalItems}}
+                    </div>
+                {{/json-schema/util/section}}
+            {{/if}}
+        {{else}}
+            {{#if items}}
+                {{#>json-schema/util/section sections='items' title='Items'}}
+                    <div class="json-schema--subschema">
+                        {{>json-schema/schema items}}
+                    </div>
+                {{/json-schema/util/section}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+
+    {{#if contains}}
+        {{#>json-schema/util/section sections='contains' title='Contains (at least one)'}}
+            <div class="json-schema--subschema">
+                {{>json-schema/schema contains}}
+            </div>
+        {{/json-schema/util/section}}
+    {{/if}}
+
+{{/if}}

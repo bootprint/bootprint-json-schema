@@ -1,0 +1,23 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema to test combinations of schemas",
+  "definitions": {
+    "integer": {
+      "type": "integer",
+      "default": 2
+    },
+    "string": {
+      "type": "string",
+      "default": "omega"
+    },
+    "complex": {
+      "type": "object",
+      "default": {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      }
+    }
+  }
+}

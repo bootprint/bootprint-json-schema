@@ -1,0 +1,13 @@
+<nav id="json-schema--navigation" class="navbar navbar-default hidden-xs">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="nav navbar-nav">
+            <li class="navbar-header">
+                <a class="navbar-brand" href="#json-schema--main-schema">Main schema</a>
+            </li>
+            {{#eachSorted definitions}}
+                <li><a href="#{{json_schema__definition_id @key}}">{{@key}}</a></li>
+            {{/eachSorted}}
+        </ul>
+    </div>
+</nav>

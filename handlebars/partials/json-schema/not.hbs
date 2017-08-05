@@ -1,0 +1,7 @@
+{{#if not}}
+    {{#>json-schema/util/section sections='not' title='Must not match'}}
+        <div class="json-schema--subschema">
+            {{>json-schema/schema not}}
+        </div>
+    {{/json-schema/util/section}}
+{{/if}}

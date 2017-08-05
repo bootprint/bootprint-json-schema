@@ -1,0 +1,13 @@
+{{!--
+    Render a list of example or enum values
+
+    @param {string} header a header for the value box
+--}}
+<div class="json-schema--values">
+    {{#each .}}
+        <div class="json-schema--value-item">
+            <div class="header">Example</div>
+            {{>json-schema/util/value .}}
+        </div>
+    {{/each}}
+</div>

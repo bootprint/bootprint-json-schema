@@ -1,0 +1,26 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "description": "schema to test enums",
+  "anyOf": [
+    {"$ref": "#/definitions/string-const"},
+    {"$ref": "#/definitions/number-const"},
+    {"$ref": "#/definitions/objcet-const"}
+  ],
+  "definitions": {
+    "string-const": {
+      "type": "string",
+      "const": "abc"
+    },
+    "number-const": {
+      "type": "number",
+      "const": 1
+    },
+    "object-const": {
+      "type": "object",
+      "const": {
+        "a": 1
+      }
+    }
+  }
+}

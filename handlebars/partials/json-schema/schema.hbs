@@ -1,0 +1,31 @@
+{{!--
+    Renders a json-schema. This is the entry-point of the schema.
+    @this {object} the json-schema
+--}}
+<div class="json-schema--schema">
+    <div class="json-schema--meta-data">
+        {{#if title}}
+            <div class="json-schema--title">{{title}}</div>
+        {{/if}}
+        {{#if description}}
+            <div class="json-schema--description">{{md description}}</div>
+        {{/if}}
+    </div>
+    {{#if $ref}}
+        {{>json-schema/ref .}}
+    {{else}}
+        {{>json-schema/type .}}
+        {{>json-schema/string .}}
+        {{>json-schema/number .}}
+        {{>json-schema/object .}}
+        {{>json-schema/enum .}}
+        {{>json-schema/const .}}
+        {{>json-schema/array .}}
+        {{>json-schema/allOf .}}
+        {{>json-schema/oneOf .}}
+        {{>json-schema/anyOf .}}
+        {{>json-schema/not .}}
+        {{>json-schema/examples-default .}}
+        {{>json-schema/format . }}
+    {{/if}}
+</div>

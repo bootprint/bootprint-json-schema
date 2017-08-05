@@ -1,0 +1,23 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema to test string restrictions",
+  "definitions": {
+    "only-a": {
+      "pattern": "a*"
+    },
+    "string-min-length": {
+      "type": "string",
+      "minLength": 2
+    },
+    "string-max-length": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "string-min-max-length": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 5
+    }
+  }
+}

@@ -26,10 +26,12 @@
   },
   "homepage": "https://github.com/bootprint/bootprint-json-schema",
   "dependencies": {
-    "bootprint-base": "^2.0.0-rc.2"
+    "bootprint-base": "^2.0.0-rc.2",
+    "handlebars": "^4.0.10",
+    "highlight.js": "^9.12.0"
   },
   "devDependencies": {
-    "bootprint-unit-testing": "^2.1.0",
+    "bootprint-unit-testing": "^2.2.0",
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
     "dirty-chai": "^2.0.0",

@@ -1,0 +1,59 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "description": "schema to test numeric restrictions",
+  "definitions": {
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "bestFriends": {
+      "type": "integer",
+      "maximum": 5
+    },
+    "two_to_three": {
+      "type": "number",
+      "exclusiveMaximum": 3.0,
+      "exclusiveMinimum": 2.0
+    },
+    "less_than_three": {
+      "type": "number",
+      "exclusiveMaximum": 3.0
+    },
+    "more_than_two": {
+      "type": "number",
+      "exclusiveMinimum": 2.0
+    },
+    "multiples_of_three": {
+      "multipleOf": 3
+    },
+    "all_restrictions": {
+      "type": "number",
+      "multipleOf": 3,
+      "exclusiveMaximum": 16.0,
+      "exclusiveMinimum": 2.0
+    },
+    "inclusive_range_wins": {
+      "type": "number",
+      "exclusiveMaximum": 20.0,
+      "maximum": 16.0,
+      "exclusiveMinimum": 0.0,
+      "minimum": 2.0
+    },
+    "exclusive_equals_inclusive": {
+      "type": "number",
+      "exclusiveMaximum": 16.0,
+      "maximum": 16.0,
+      "exclusiveMinimum": 2.0,
+      "minimum": 2.0
+    },
+    "exclusive_range_wins": {
+      "type": "number",
+      "exclusiveMaximum": 16.0,
+      "maximum": 20.0,
+      "exclusiveMinimum": 2.0,
+      "minimum": 0.0
+    }
+
+  }
+}

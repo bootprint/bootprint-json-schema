@@ -1,0 +1,69 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema to test combinations of schemas",
+  "definitions": {
+    "allOf-test": {
+      "allOf": [
+        {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 5
+        },
+        {
+          "type": "integer",
+          "minimum": 4,
+          "maximum": 8
+        },
+        {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 9
+        }
+      ]
+    },
+    "anyOf-test": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 3
+        },
+        {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 8
+        },
+        {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 12
+        }
+      ]
+    },
+    "oneOf-test": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 6
+        },
+        {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 10
+        },
+        {
+          "type": "integer",
+          "minimum": 9,
+          "maximum": 20
+        }
+      ]
+    },
+    "not-test": {
+      "not": {
+        "type": "integer"
+      }
+    }
+  }
+}

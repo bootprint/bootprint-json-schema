@@ -1,7 +1,7 @@
-{{#if allOf}}
-    {{#>json-schema/util/section sections='allOf' title='Must match all of'}}
+{{#if oneOf}}
+    {{#>json-schema/util/section sections='oneOf' title='Must match exactly one of'}}
         <div class="json-schema--subschema-group">
-            {{#each allOf}}
+            {{#each oneOf}}
                 <div class="json-schema--subschema">
                     {{>json-schema/schema .}}
                 </div>

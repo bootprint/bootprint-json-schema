@@ -1,0 +1,15 @@
+{{#if (json_schema__could_be_numeric)}}
+    {{#with (json_schema__number_range .) as | text |}}
+        {{#if text}}
+            {{#>json-schema/util/section sections='minimum, maximum, exclusiveMinimum, exclusiveMaximum' title='Numeric range'}}
+                {{text}}
+            {{/json-schema/util/section}}
+        {{/if}}
+    {{/with}}
+
+    {{#if multipleOf}}
+        {{#>json-schema/util/section sections='multipleOf' title='Multiple of'}}
+            x must be a multiple of {{multipleOf}}
+        {{/json-schema/util/section}}
+    {{/if}}
+{{/if}}
