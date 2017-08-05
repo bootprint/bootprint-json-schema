@@ -31,7 +31,7 @@ npm -g install bootprint-json-schema
 After installing the package globally, you can run bootprint with the command
 
 ```bash
-bootprint json-schema https://raw.githubusercontent.com/bootprint/bootprint-json-schema/v2.0.0-rc.1/examples/example.json target
+bootprint json-schema https://raw.githubusercontent.com/bootprint/bootprint-json-schema/v2.0.0-rc.2/examples/example.json target
 ```
 
 `example.json` can be found in [examples/example.json](examples/example.json) in this project.

@@ -2,6 +2,12 @@
 
 
 <a name="current-release"></a>
+# Version 2.0.0-rc.2 (Sat, 05 Aug 2017 22:41:02 GMT)
+
+* [955e501](https://github.com/bootprint/bootprint-json-schema/commit/955e501) Update documentation - Nils Knappmeier
+* [c947822](https://github.com/bootprint/bootprint-json-schema/commit/c947822) Update documentation by running "npm run thought" - Nils Knappmeier
+* [8040014](https://github.com/bootprint/bootprint-json-schema/commit/8040014) BREAKING: Complete rewrite of all partials, templates and helpers - Nils Knappmeier
+
 # Version 2.0.0-rc.1 (Sun, 25 Jun 2017 22:01:12 GMT)
 
 * [01e6d2b](https://github.com/bootprint/bootprint-json-schema/commit/01e6d2b) Bump version of bootprint-base to get better helper docs - Nils Knappmeier

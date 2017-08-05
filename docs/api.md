@@ -7,7 +7,7 @@ This page describes the API of this Bootprint-module
   * [Partials](#partials)
 * [Handlebars Helpers](#helpers)
   * from [bootprint-base@2.0.0-rc.2](#helpers-bootprint-base)
-  * from [bootprint-json-schema@2.0.0-rc.1](#helpers-bootprint-json-schema)
+  * from [bootprint-json-schema@2.0.0-rc.2](#helpers-bootprint-json-schema)
 * [LessCSS](#lesscss)
     
 # Templates
@@ -216,7 +216,7 @@ Default template for rendering the HTML-page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/base/body.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/base/body.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/base/body.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/base/body.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -273,7 +273,7 @@ This partial is displayed at the bottom of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/base/header.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/base/header.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/base/header.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/base/header.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -406,7 +406,7 @@ This partial is rendered into the HTML-title in the `<head>`-tag of the page.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/allOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/allOf.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/allOf.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/allOf.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -434,7 +434,7 @@ Render the allOf keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/anyOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/anyOf.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/anyOf.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/anyOf.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -462,7 +462,7 @@ Render the anyOf keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/array.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/array.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/array.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/array.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -493,7 +493,7 @@ Renders the array-specific keywords of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/const.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/const.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/const.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/const.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -521,7 +521,7 @@ Render the "const" keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/definitions.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/definitions.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/definitions.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/definitions.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -549,7 +549,7 @@ Renders the defintiions-property of the main-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/draft-04/default.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/draft-04/default.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/draft-04/default.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/draft-04/default.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -576,7 +576,7 @@ Render default values as in draft-04 (without "examples")
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/enum.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/enum.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/enum.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/enum.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -604,7 +604,7 @@ Render the enum keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/examples-default.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/examples-default.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/examples-default.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/examples-default.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -634,7 +634,7 @@ Render the "examples" and "default" keywords of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/format.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/format.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/format.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/format.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -656,7 +656,7 @@ Render the "format" keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/navbar.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/navbar.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/navbar.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/navbar.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -678,7 +678,7 @@ Renders the navigation bar at the top of the page
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/not.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/not.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/not.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/not.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -706,7 +706,7 @@ Render the not keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/number.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/number.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/number.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/number.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -728,7 +728,7 @@ Render the number-specific keywords of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/object.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/object.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/object.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/object.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -761,7 +761,7 @@ Render the object-specific keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/oneOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/oneOf.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/oneOf.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/oneOf.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -789,7 +789,7 @@ Render the oneOf keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/ref.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/ref.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/ref.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/ref.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -811,7 +811,7 @@ Renders a single json-reference
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/schema.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/schema.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/schema.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/schema.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -866,7 +866,7 @@ Renders a json-schema. This is the entry-point of the schema.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/string.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/string.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/string.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/string.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -894,7 +894,7 @@ Render the string-specific keywords of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/type.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/type.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/type.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/type.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -916,7 +916,7 @@ Render the "type" keyword of a json-schema
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/regex.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/regex.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/util/regex.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/util/regex.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -938,7 +938,7 @@ Renders a regular express (e.g. for `patternProperties` and `pattern`)
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/section.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/section.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/util/section.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/util/section.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -965,7 +965,7 @@ section.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/value.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/value.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/util/value.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/util/value.hbs</a>        </td>
     </tr>
         <tr>
             <th>Used by</th>
@@ -992,7 +992,7 @@ Renders a single default, enum or const value
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/values.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/values.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/partials/json-schema/util/values.hbs">bootprint-json-schema @ 2.0.0-rc.2 / handlebars/partials/json-schema/util/values.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
@@ -1171,7 +1171,7 @@ is not addressed by this helper.
 <a name="helpers-bootprint-json-schema"></a>
 # Helpers (bootprint-json-schema)
 
-(from [bootprint-json-schema@2.0.0-rc.1/handlebars/helpers/index.js](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/helpers/index.js)
+(from [bootprint-json-schema@2.0.0-rc.2/handlebars/helpers/index.js](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/handlebars/helpers/index.js)
 )
 
 <a name="helpers"></a>
@@ -1410,8 +1410,8 @@ Convert an array into a prose-enumeration
 
 * [highlight.js@9.12.0/styles/default.css](https://github.com/isagalaev/highlight.js/blob/v9.12.0/styles/default.css)  
 * [bootprint-base@2.0.0-rc.2/less/main.less](https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/less/main.less)  
-* [bootprint-json-schema@2.0.0-rc.1/less/theme.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/less/theme.less)  
-* [bootprint-json-schema@2.0.0-rc.1/less/variables.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/less/variables.less)  
+* [bootprint-json-schema@2.0.0-rc.2/less/theme.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/less/theme.less)  
+* [bootprint-json-schema@2.0.0-rc.2/less/variables.less](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.2/less/variables.less)  
     
 ## LessCSS include paths
 
