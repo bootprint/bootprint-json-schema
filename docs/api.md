@@ -33,114 +33,86 @@ This page describes the API of this Bootprint-module
 │ │   <i>This partial is rendered into the HTML-title in th...</i>
 │ └── <a href="#partial-basehtml-head-extra">base/html-head-extra</a>
 │     <i>This partial is added inside the <head>-tag, after...</i>
-├── <a href="#partial-baseheader">base/header</a>
-│   <i>This partial is displayed at the top of the HTML-b...</i>
+├─┬ <a href="#partial-baseheader">base/header</a>
+│ └── <a href="#partial-json-schemanavbar">json-schema/navbar</a>
 ├─┬ <a href="#partial-basebody">base/body</a>
 │ │ <i>Renders the main-schema as panel and the sub-schem...</i>
-│ ├─┬ <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>
-│ │ │ <i>Renders a json.schema inside a bootstrap-panel.
-│ │ │   ...</i>
-│ │ ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│ │ │ │ <i>When properties are renderered this partial render...</i>
-│ │ │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │ │     <i>Renders a reference to a subschema</i>
-│ │ ├── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │ │   <i>Renders a reference to a subschema</i>
-│ │ └─┬ <a href="#partial-json-schemabody">json-schema/body</a>
-│ │   │ <i>Renders a json-schema without the surrounding pane...</i>
-│ │   ├─┬ <a href="#partial-json-schematype-object">json-schema/type-object</a>
-│ │   │ │ <i>Renders the properties of an `object`</i>
-│ │   │ ├─┬ <a href="#partial-json-schemaproperties">json-schema/properties</a>
-│ │   │ │ │ <i>Renders json-schema object properties.</i>
-│ │   │ │ ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│ │   │ │ │ │ <i>When properties are renderered this partial render...</i>
-│ │   │ │ │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │   │ │ │     <i>Renders a reference to a subschema</i>
-│ │   │ │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│ │   │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│ │   │ └─┬ <a href="#partial-json-schemaadditionalproperties">json-schema/additionalProperties</a>
-│ │   │   │ <i>Show a subschema for additionaProperties of a `obj...</i>
-│ │   │   ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│ │   │   │ │ <i>When properties are renderered this partial render...</i>
-│ │   │   │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │   │   │     <i>Renders a reference to a subschema</i>
-│ │   │   └── <a href="#partial-json-schemabody">json-schema/body</a>
-│ │   │       <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│ │   ├─┬ <a href="#partial-json-schemaarray-items">json-schema/array-items</a>
-│ │   │ │ <i>renders a json-schema "items"-definition of array-...</i>
-│ │   │ ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│ │   │ │ │ <i>When properties are renderered this partial render...</i>
-│ │   │ │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │   │ │     <i>Renders a reference to a subschema</i>
-│ │   │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│ │   │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│ │   ├─┬ <a href="#partial-json-schemaallof">json-schema/allOf</a>
-│ │   │ │ <i>renders a json-schema "allOf"-definition.</i>
-│ │   │ ├── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │   │ │   <i>Renders a reference to a subschema</i>
-│ │   │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│ │   │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│ │   └─┬ <a href="#partial-json-schemaanyof">json-schema/anyOf</a>
-│ │     │ <i>renders a json-schema "anyOf"-definition.</i>
-│ │     ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│ │     │ │ <i>When properties are renderered this partial render...</i>
-│ │     │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│ │     │     <i>Renders a reference to a subschema</i>
-│ │     └── <a href="#partial-json-schemabody">json-schema/body</a>
-│ │         <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ ├─┬ <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │ <i>Renders a json-schema. This is the entry-point of ...</i>
+│ │ ├── <a href="#partial-json-schemaref">json-schema/ref</a>
+│ │ ├── <a href="#partial-json-schematype">json-schema/type</a>
+│ │ ├─┬ <a href="#partial-json-schemastring">json-schema/string</a>
+│ │ │ └── <a href="#partial-json-schemautilregex">json-schema/util/regex</a>
+│ │ ├── <a href="#partial-json-schemanumber">json-schema/number</a>
+│ │ ├─┬ <a href="#partial-json-schemaobject">json-schema/object</a>
+│ │ │ │ <i>property dependency</i>
+│ │ │ ├── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │ │   <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ │ └── <a href="#partial-json-schemautilregex">json-schema/util/regex</a>
+│ │ ├─┬ <a href="#partial-json-schemaenum">json-schema/enum</a>
+│ │ │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│ │ ├─┬ <a href="#partial-json-schemaconst">json-schema/const</a>
+│ │ │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│ │ ├─┬ <a href="#partial-json-schemaarray">json-schema/array</a>
+│ │ │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ ├─┬ <a href="#partial-json-schemaallof">json-schema/allOf</a>
+│ │ │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ ├─┬ <a href="#partial-json-schemaoneof">json-schema/oneOf</a>
+│ │ │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ ├─┬ <a href="#partial-json-schemaanyof">json-schema/anyOf</a>
+│ │ │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ ├─┬ <a href="#partial-json-schemanot">json-schema/not</a>
+│ │ │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│ │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│ │ ├─┬ <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>
+│ │ │ ├─┬ <a href="#partial-json-schemadraft-04default">json-schema/draft-04/default</a>
+│ │ │ │ │ <i>Render default values as in draft-04 (without "exa...</i>
+│ │ │ │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│ │ │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│ │ └── <a href="#partial-json-schemaformat">json-schema/format</a>
 │ └─┬ <a href="#partial-json-schemadefinitions">json-schema/definitions</a>
 │   │ <i>Renders all subschemas</i>
-│   └─┬ <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>
-│     │ <i>Renders a json.schema inside a bootstrap-panel.
-│     │   ...</i>
-│     ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│     │ │ <i>When properties are renderered this partial render...</i>
-│     │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│     │     <i>Renders a reference to a subschema</i>
-│     ├── <a href="#partial-json-schemareference">json-schema/reference</a>
-│     │   <i>Renders a reference to a subschema</i>
-│     └─┬ <a href="#partial-json-schemabody">json-schema/body</a>
-│       │ <i>Renders a json-schema without the surrounding pane...</i>
-│       ├─┬ <a href="#partial-json-schematype-object">json-schema/type-object</a>
-│       │ │ <i>Renders the properties of an `object`</i>
-│       │ ├─┬ <a href="#partial-json-schemaproperties">json-schema/properties</a>
-│       │ │ │ <i>Renders json-schema object properties.</i>
-│       │ │ ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│       │ │ │ │ <i>When properties are renderered this partial render...</i>
-│       │ │ │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│       │ │ │     <i>Renders a reference to a subschema</i>
-│       │ │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│       │ │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│       │ └─┬ <a href="#partial-json-schemaadditionalproperties">json-schema/additionalProperties</a>
-│       │   │ <i>Show a subschema for additionaProperties of a `obj...</i>
-│       │   ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│       │   │ │ <i>When properties are renderered this partial render...</i>
-│       │   │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│       │   │     <i>Renders a reference to a subschema</i>
-│       │   └── <a href="#partial-json-schemabody">json-schema/body</a>
-│       │       <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│       ├─┬ <a href="#partial-json-schemaarray-items">json-schema/array-items</a>
-│       │ │ <i>renders a json-schema "items"-definition of array-...</i>
-│       │ ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│       │ │ │ <i>When properties are renderered this partial render...</i>
-│       │ │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│       │ │     <i>Renders a reference to a subschema</i>
-│       │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│       │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│       ├─┬ <a href="#partial-json-schemaallof">json-schema/allOf</a>
-│       │ │ <i>renders a json-schema "allOf"-definition.</i>
-│       │ ├── <a href="#partial-json-schemareference">json-schema/reference</a>
-│       │ │   <i>Renders a reference to a subschema</i>
-│       │ └── <a href="#partial-json-schemabody">json-schema/body</a>
-│       │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
-│       └─┬ <a href="#partial-json-schemaanyof">json-schema/anyOf</a>
-│         │ <i>renders a json-schema "anyOf"-definition.</i>
-│         ├─┬ <a href="#partial-json-schemadatatype">json-schema/datatype</a>
-│         │ │ <i>When properties are renderered this partial render...</i>
-│         │ └── <a href="#partial-json-schemareference">json-schema/reference</a>
-│         │     <i>Renders a reference to a subschema</i>
-│         └── <a href="#partial-json-schemabody">json-schema/body</a>
-│             <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│   └─┬ <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │ <i>Renders a json-schema. This is the entry-point of ...</i>
+│     ├── <a href="#partial-json-schemaref">json-schema/ref</a>
+│     ├── <a href="#partial-json-schematype">json-schema/type</a>
+│     ├─┬ <a href="#partial-json-schemastring">json-schema/string</a>
+│     │ └── <a href="#partial-json-schemautilregex">json-schema/util/regex</a>
+│     ├── <a href="#partial-json-schemanumber">json-schema/number</a>
+│     ├─┬ <a href="#partial-json-schemaobject">json-schema/object</a>
+│     │ │ <i>property dependency</i>
+│     │ ├── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │ │   <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     │ └── <a href="#partial-json-schemautilregex">json-schema/util/regex</a>
+│     ├─┬ <a href="#partial-json-schemaenum">json-schema/enum</a>
+│     │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│     ├─┬ <a href="#partial-json-schemaconst">json-schema/const</a>
+│     │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│     ├─┬ <a href="#partial-json-schemaarray">json-schema/array</a>
+│     │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     ├─┬ <a href="#partial-json-schemaallof">json-schema/allOf</a>
+│     │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     ├─┬ <a href="#partial-json-schemaoneof">json-schema/oneOf</a>
+│     │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     ├─┬ <a href="#partial-json-schemaanyof">json-schema/anyOf</a>
+│     │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     ├─┬ <a href="#partial-json-schemanot">json-schema/not</a>
+│     │ └── <a href="#partial-json-schemaschema">json-schema/schema</a>
+│     │     <span title="cycle detected"><i>(&#x1F501; cycle detected)</i> </span>
+│     ├─┬ <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>
+│     │ ├─┬ <a href="#partial-json-schemadraft-04default">json-schema/draft-04/default</a>
+│     │ │ │ <i>Render default values as in draft-04 (without "exa...</i>
+│     │ │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│     │ └── <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+│     └── <a href="#partial-json-schemaformat">json-schema/format</a>
 ├── <a href="#partial-basefooter">base/footer</a>
 │   <i>This partial is displayed at the bottom of the HTM...</i>
 └── <a href="#partial-basejavascript-libs">base/javascript-libs</a>
@@ -180,7 +152,7 @@ Default template for rendering the HTML-page.
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
                     <a href="#partial-json-schemadefinitions">json-schema/definitions</a>
             </td>
         </tr>
@@ -232,8 +204,14 @@ This partial is displayed at the bottom of the HTML-body.
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-base/blob/v2.0.0-rc.2/handlebars/partials/base/header.hbs">bootprint-base @ 2.0.0-rc.2 / handlebars/partials/base/header.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/base/header.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/base/header.hbs</a>        </td>
     </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemanavbar">json-schema/navbar</a>
+            </td>
+        </tr>
         <tr>
             <th>Used by</th>
             <td>
@@ -242,14 +220,7 @@ This partial is displayed at the bottom of the HTML-body.
         </tr>
 </table>
 
-```
-This partial is displayed at the top of the HTML-body.
-    It is empty and can be overridden to include custom content in
-    the Bootprint-result.
 
-    @param {object} $context$ the whole input data
-    @public
-```
 
 <a name="partial-basehtml-head-extra"></a>
 ### base/html-head-extra
@@ -353,34 +324,6 @@ This partial is rendered into the HTML-title in the `<head>`-tag of the page.
     It can be overridden in order to display a custom title.
 ```
 
-<a name="partial-json-schemaadditionalproperties"></a>
-### json-schema/additionalProperties
-
-<table>
-    <tr>
-        <th>Source file</th>
-        <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/additionalProperties.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/additionalProperties.hbs</a>        </td>
-    </tr>
-        <tr>
-            <th>Uses partials</th>
-            <td>
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
-            </td>
-        </tr>
-        <tr>
-            <th>Used by</th>
-            <td>
-                    <a href="#partial-json-schematype-object">json-schema/type-object</a>
-            </td>
-        </tr>
-</table>
-
-```
-Show a subschema for additionaProperties of a `object` definition.
-```
-
 <a name="partial-json-schemaallof"></a>
 ### json-schema/allOf
 
@@ -393,21 +336,18 @@ Show a subschema for additionaProperties of a `object` definition.
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemareference">json-schema/reference</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
 </table>
 
-```
-renders a json-schema "allOf"-definition.
-```
+
 
 <a name="partial-json-schemaanyof"></a>
 ### json-schema/anyOf
@@ -421,122 +361,71 @@ renders a json-schema "allOf"-definition.
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
 </table>
 
-```
-renders a json-schema "anyOf"-definition.
-```
 
-<a name="partial-json-schemaarray-items"></a>
-### json-schema/array-items
+
+<a name="partial-json-schemaarray"></a>
+### json-schema/array
 
 <table>
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/array-items.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/array-items.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/array.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/array.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
 </table>
 
-```
-renders a json-schema "items"-definition of array-types.
-```
 
-<a name="partial-json-schemabody"></a>
-### json-schema/body
+
+<a name="partial-json-schemaconst"></a>
+### json-schema/const
 
 <table>
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/body.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/body.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/const.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/const.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schematype-object">json-schema/type-object</a>, 
-                    <a href="#partial-json-schemaarray-items">json-schema/array-items</a>, 
-                    <a href="#partial-json-schematype-object">json-schema/type-object</a>, 
-                    <a href="#partial-json-schemaallof">json-schema/allOf</a>, 
-                    <a href="#partial-json-schemaanyof">json-schema/anyOf</a>
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
-                    <a href="#partial-json-schemaadditionalproperties">json-schema/additionalProperties</a>, 
-                    <a href="#partial-json-schemaallof">json-schema/allOf</a>, 
-                    <a href="#partial-json-schemaanyof">json-schema/anyOf</a>, 
-                    <a href="#partial-json-schemaarray-items">json-schema/array-items</a>, 
-                    <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>, 
-                    <a href="#partial-json-schemaproperties">json-schema/properties</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
 </table>
 
-```
-Renders a json-schema without the surrounding panel.
-    @param {boolean} showType whether or not to show the plain datatype for primitives
-```
 
-<a name="partial-json-schemadatatype"></a>
-### json-schema/datatype
-
-<table>
-    <tr>
-        <th>Source file</th>
-        <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/datatype.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/datatype.hbs</a>        </td>
-    </tr>
-        <tr>
-            <th>Uses partials</th>
-            <td>
-                    <a href="#partial-json-schemareference">json-schema/reference</a>
-            </td>
-        </tr>
-        <tr>
-            <th>Used by</th>
-            <td>
-                    <a href="#partial-json-schemaadditionalproperties">json-schema/additionalProperties</a>, 
-                    <a href="#partial-json-schemaanyof">json-schema/anyOf</a>, 
-                    <a href="#partial-json-schemaarray-items">json-schema/array-items</a>, 
-                    <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>, 
-                    <a href="#partial-json-schemaproperties">json-schema/properties</a>
-            </td>
-        </tr>
-</table>
-
-```
-When properties are renderered this partial renders the datatype of a property,
-    with a link to the type-definition (in case of a $ref).
-    Depending on the input, it renders an augmented data-type (e.g. "string[]"),
-    the 'format'-value (e.g. "date-time") and "enum"-values.
-
-    @param {boolean} discriminator true, this property is a swagger-discriminator (in which case enums are rendered as links)
-```
 
 <a name="partial-json-schemadefinitions"></a>
 ### json-schema/definitions
@@ -550,7 +439,7 @@ When properties are renderered this partial renders the datatype of a property,
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
             </td>
         </tr>
         <tr>
@@ -565,116 +454,432 @@ When properties are renderered this partial renders the datatype of a property,
 Renders all subschemas
 ```
 
-<a name="partial-json-schemamain-panel"></a>
-### json-schema/main-panel
+<a name="partial-json-schemadraft-04default"></a>
+### json-schema/draft-04/default
 
 <table>
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/main-panel.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/main-panel.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/draft-04/default.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/draft-04/default.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemareference">json-schema/reference</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>
+            </td>
+        </tr>
+</table>
+
+```
+Render default values as in draft-04 (without "examples")
+```
+
+<a name="partial-json-schemaenum"></a>
+### json-schema/enum
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/enum.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/enum.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemaexamples-default"></a>
+### json-schema/examples-default
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/examples-default.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/examples-default.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemadraft-04default">json-schema/draft-04/default</a>, 
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>, 
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemaformat"></a>
+### json-schema/format
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/format.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/format.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemanavbar"></a>
+### json-schema/navbar
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/navbar.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/navbar.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-baseheader">base/header</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemanot"></a>
+### json-schema/not
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/not.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/not.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemanumber"></a>
+### json-schema/number
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/number.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/number.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemaobject"></a>
+### json-schema/object
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/object.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/object.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemautilregex">json-schema/util/regex</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>, 
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+```
+property dependency
+```
+
+<a name="partial-json-schemaoneof"></a>
+### json-schema/oneOf
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/oneOf.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/oneOf.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemaref"></a>
+### json-schema/ref
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/ref.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/ref.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemaschema"></a>
+### json-schema/schema
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/schema.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/schema.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemaref">json-schema/ref</a>, 
+                    <a href="#partial-json-schematype">json-schema/type</a>, 
+                    <a href="#partial-json-schemastring">json-schema/string</a>, 
+                    <a href="#partial-json-schemanumber">json-schema/number</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaenum">json-schema/enum</a>, 
+                    <a href="#partial-json-schemaconst">json-schema/const</a>, 
+                    <a href="#partial-json-schemaarray">json-schema/array</a>, 
+                    <a href="#partial-json-schemaallof">json-schema/allOf</a>, 
+                    <a href="#partial-json-schemaoneof">json-schema/oneOf</a>, 
+                    <a href="#partial-json-schemaanyof">json-schema/anyOf</a>, 
+                    <a href="#partial-json-schemanot">json-schema/not</a>, 
+                    <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>, 
+                    <a href="#partial-json-schemaformat">json-schema/format</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
                     <a href="#partial-basebody">base/body</a>, 
-                    <a href="#partial-json-schemadefinitions">json-schema/definitions</a>
-            </td>
-        </tr>
-</table>
-
-```
-Renders a json.schema inside a bootstrap-panel.
-    @public
-    @readonly
-```
-
-<a name="partial-json-schemaproperties"></a>
-### json-schema/properties
-
-<table>
-    <tr>
-        <th>Source file</th>
-        <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/properties.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/properties.hbs</a>        </td>
-    </tr>
-        <tr>
-            <th>Uses partials</th>
-            <td>
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
-            </td>
-        </tr>
-        <tr>
-            <th>Used by</th>
-            <td>
-                    <a href="#partial-json-schematype-object">json-schema/type-object</a>
-            </td>
-        </tr>
-</table>
-
-```
-Renders json-schema object properties.
-```
-
-<a name="partial-json-schemareference"></a>
-### json-schema/reference
-
-<table>
-    <tr>
-        <th>Source file</th>
-        <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/reference.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/reference.hbs</a>        </td>
-    </tr>
-        <tr>
-            <th>Used by</th>
-            <td>
                     <a href="#partial-json-schemaallof">json-schema/allOf</a>, 
-                    <a href="#partial-json-schemadatatype">json-schema/datatype</a>, 
-                    <a href="#partial-json-schemamain-panel">json-schema/main-panel</a>
+                    <a href="#partial-json-schemaanyof">json-schema/anyOf</a>, 
+                    <a href="#partial-json-schemaarray">json-schema/array</a>, 
+                    <a href="#partial-json-schemaarray">json-schema/array</a>, 
+                    <a href="#partial-json-schemaarray">json-schema/array</a>, 
+                    <a href="#partial-json-schemaarray">json-schema/array</a>, 
+                    <a href="#partial-json-schemadefinitions">json-schema/definitions</a>, 
+                    <a href="#partial-json-schemanot">json-schema/not</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemaoneof">json-schema/oneOf</a>
             </td>
         </tr>
 </table>
 
 ```
-Renders a reference to a subschema
+Renders a json-schema. This is the entry-point of the schema.
+    @this {object} the json-schema
 ```
 
-<a name="partial-json-schematype-object"></a>
-### json-schema/type-object
+<a name="partial-json-schemastring"></a>
+### json-schema/string
 
 <table>
     <tr>
         <th>Source file</th>
         <td>
-<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/type-object.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/type-object.hbs</a>        </td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/string.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/string.hbs</a>        </td>
     </tr>
         <tr>
             <th>Uses partials</th>
             <td>
-                    <a href="#partial-json-schemaproperties">json-schema/properties</a>, 
-                    <a href="#partial-json-schemaadditionalproperties">json-schema/additionalProperties</a>
+                    <a href="#partial-json-schemautilregex">json-schema/util/regex</a>
             </td>
         </tr>
         <tr>
             <th>Used by</th>
             <td>
-                    <a href="#partial-json-schemabody">json-schema/body</a>, 
-                    <a href="#partial-json-schemabody">json-schema/body</a>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schematype"></a>
+### json-schema/type
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/type.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/type.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaschema">json-schema/schema</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemautilregex"></a>
+### json-schema/util/regex
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/regex.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/regex.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaobject">json-schema/object</a>, 
+                    <a href="#partial-json-schemastring">json-schema/string</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemautilsection"></a>
+### json-schema/util/section
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/section.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/section.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-partial-block">@partial-block</a>
             </td>
         </tr>
 </table>
 
 ```
-Renders the properties of an `object`
+Helper partial to render a restriction (array, numeric etc).
+   Use as block-partial
+
+   @param {string} sections a coma-separated list of section names (i.e. items, additionalItems)
+   @param {string} title a title for the restrictions
+```
+
+<a name="partial-json-schemautilvalue"></a>
+### json-schema/util/value
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/value.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/value.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Used by</th>
+            <td>
+                    <a href="#partial-json-schemaconst">json-schema/const</a>, 
+                    <a href="#partial-json-schemadraft-04default">json-schema/draft-04/default</a>, 
+                    <a href="#partial-json-schemaenum">json-schema/enum</a>, 
+                    <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>, 
+                    <a href="#partial-json-schemaexamples-default">json-schema/examples-default</a>, 
+                    <a href="#partial-json-schemautilvalues">json-schema/util/values</a>
+            </td>
+        </tr>
+</table>
+
+
+
+<a name="partial-json-schemautilvalues"></a>
+### json-schema/util/values
+
+<table>
+    <tr>
+        <th>Source file</th>
+        <td>
+<a href="https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/partials/json-schema/util/values.hbs">bootprint-json-schema @ 2.0.0-rc.1 / handlebars/partials/json-schema/util/values.hbs</a>        </td>
+    </tr>
+        <tr>
+            <th>Uses partials</th>
+            <td>
+                    <a href="#partial-json-schemautilvalue">json-schema/util/value</a>
+            </td>
+        </tr>
+</table>
+
+```
+Render a list of example or enum values
+
+    @param {string} header a header for the value box
 ```
 
      
@@ -836,89 +1041,221 @@ is not addressed by this helper.
 
 # Helpers 
 
-(from [bootprint-json-schema@2.0.0-rc.1/handlebars/helpers.js](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/helpers.js))
-
-## Members
-
-<dl>
-<dt><a href="#helpers">helpers</a></dt>
-<dd><p>Handlebars helpers for <code>bootprint-json-schema</code></p>
-</dd>
-</dl>
+(from [bootprint-json-schema@2.0.0-rc.1/handlebars/helpers/index.js](https://github.com/bootprint/bootprint-json-schema/blob/v2.0.0-rc.1/handlebars/helpers/index.js))
 
 ## Functions
 
 <dl>
-<dt><a href="#numericRange">numericRange(range)</a> ⇒ <code>*</code></dt>
-<dd><p>Render a range for numeric types (integer, number)</p>
+<dt><a href="#json_schema__doclink">json_schema__doclink(type, sectionName, options)</a></dt>
+<dd><p>Render a link to a json-schema docs section from the json-schema documentation</p>
 </dd>
-<dt><a href="#stringLengthRange">stringLengthRange(range)</a></dt>
-<dd><p>Render string length restrictions</p>
+<dt><a href="#json_schema__if_version">json_schema__if_version(...targetVersions)</a></dt>
+<dd><p>Executes the helper-block, if the version matches any of the
+specified target versions</p>
+</dd>
+<dt><a href="#json_schema__number_range">json_schema__number_range(schema, options)</a></dt>
+<dd><p>Return a string for the numeric range restriction of the given schema
+(as determined by <code>minimum</code>, <code>maximum</code>, <code>exclusiveMinimum</code> and <code>exclusiveMaximum</code>
+properties)</p>
+<p>The implementation is dispatched to version-specific behavior because <code>draft-04</code>
+and <code>draft-05</code> differ from <code>draft-06</code></p>
+</dd>
+<dt><a href="#determineVersion">determineVersion(options)</a> ⇒ <code>string</code></dt>
+<dd><p>Determine the schema-version from the data.
+The property <code>$explicitSchemaVersion</code> of the data object
+can contain an explicit version.
+If it does not exist, the version will be derived from the $schema-property.
+As a fallback, &quot;draft-04&quot; will be expected</p>
+</dd>
+<dt><a href="#json_schema__definition_id">json_schema__definition_id(name)</a> ⇒ <code>string</code></dt>
+<dd><p>Compute the element-id for a definition panel</p>
+</dd>
+<dt><a href="#json_schema__count_range">json_schema__count_range([min], [max], singular, plural)</a> ⇒ <code>string</code> | <code>null</code></dt>
+<dd><p>Returns a prose-description of a number of things (e.g. &quot;at least one item&quot;)</p>
+</dd>
+<dt><a href="#json_schema__is_required">json_schema__is_required(schema, propertyName)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Returns &quot;true&quot;, it the given propertyName is among the required properties
+of a schema</p>
+</dd>
+<dt><a href="#json_schema__could_be_numeric">json_schema__could_be_numeric()</a></dt>
+<dd><p>Return true, if the type is numeric (integer or number) or <em>could be numeric</em></p>
+<p>The type <em>could be</em> numeric, if it is an array that includes number or integer,
+or if it is not specified.</p>
+</dd>
+<dt><a href="#json_schema__could_be_of_type">json_schema__could_be_of_type(type)</a></dt>
+<dd><p>Return true, if the type is a string or <em>could be</em> a string</p>
+<p>The type <em>could be</em> string, if it is an array that includes number or integer,
+or if it is not specified.</p>
+</dd>
+<dt><a href="#json_schema__split_coma">json_schema__split_coma(list)</a> ⇒ <code>Array.&lt;string&gt;</code></dt>
+<dd><p>Splits a coma-separated list into an array.</p>
+<p>This helper can be used as nested-helper for other helpers that expect arrays</p>
+</dd>
+<dt><a href="#json_schema__is_array">json_schema__is_array(value)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Returns true, if the value is an array</p>
+</dd>
+<dt><a href="#json_schema__enumerate">json_schema__enumerate(items)</a> ⇒</dt>
+<dd><p>Convert an array into a prose-enumeration</p>
 </dd>
 </dl>
 
-<a name="helpers"></a>
+<a name="json_schema__doclink"></a>
 
-## helpers
-Handlebars helpers for `bootprint-json-schema`
+## json_schema__doclink(type, sectionName, options)
+Render a link to a json-schema docs section from the json-schema documentation
 
-**Kind**: global variable  
-
-* [helpers](#helpers)
-    * [.json_schema__datatype(value)](#helpers.json_schema__datatype) ⇒ <code>String</code>
-    * [.json_schema__range(range)](#helpers.json_schema__range)
-
-<a name="helpers.json_schema__datatype"></a>
-
-### helpers.json_schema__datatype(value) ⇒ <code>String</code>
-Returns a descriptive string for a datatype
-
-**Kind**: static method of [<code>helpers</code>](#helpers)  
-**Returns**: <code>String</code> - a string like <code>string[]</code> or <code>object[][]</code>  
-**Access**: public  
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>object</code> | a json-schema datatype-object |
+| type | <code>string</code> | the type of section (keywords, formats) |
+| sectionName | <code>string</code> | the section name (e.g. items) |
+| options | <code>object</code> | the Handlebars options |
 
-<a name="helpers.json_schema__range"></a>
+<a name="json_schema__if_version"></a>
 
-### helpers.json_schema__range(range)
-**Kind**: static method of [<code>helpers</code>](#helpers)  
-**Access**: public  
+## json_schema__if_version(...targetVersions)
+Executes the helper-block, if the version matches any of the
+specified target versions
+
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| range |  | a json-schema object with minimum, maximum, exclusiveMinimum, exclusiveMaximum |
-| [range.minimum] | <code>number</code> |  |
-| [range.maximum] | <code>number</code> |  |
-| [range.type] | <code>string</code> | the json-type (integer, or number) |
-| [range.minimumExclusive] | <code>boolean</code> |  |
-| [range.maximumExclusive] | <code>boolean</code> |  |
+| ...targetVersions | <code>string</code> | a list of schema-versions to match against (varargs) |
 
-<a name="numericRange"></a>
+<a name="json_schema__number_range"></a>
 
-## numericRange(range) ⇒ <code>\*</code>
-Render a range for numeric types (integer, number)
+## json_schema__number_range(schema, options)
+Return a string for the numeric range restriction of the given schema
+(as determined by `minimum`, `maximum`, `exclusiveMinimum` and `exclusiveMaximum`
+properties)
+
+The implementation is dispatched to version-specific behavior because `draft-04`
+and `draft-05` differ from `draft-06`
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| schema | <code>object</code> | the current (sub-)schema |
+| options | <code>object</code> | the Handlebars options |
+
+<a name="determineVersion"></a>
+
+## determineVersion(options) ⇒ <code>string</code>
+Determine the schema-version from the data.
+The property `$explicitSchemaVersion` of the data object
+can contain an explicit version.
+If it does not exist, the version will be derived from the $schema-property.
+As a fallback, "draft-04" will be expected
+
+**Kind**: global function  
+
+| Param | Description |
+| --- | --- |
+| options | the Handlebars options-object |
+
+<a name="json_schema__definition_id"></a>
+
+## json_schema__definition_id(name) ⇒ <code>string</code>
+Compute the element-id for a definition panel
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | the name of the definition (the key within the definitions object) |
+
+<a name="json_schema__count_range"></a>
+
+## json_schema__count_range([min], [max], singular, plural) ⇒ <code>string</code> \| <code>null</code>
+Returns a prose-description of a number of things (e.g. "at least one item")
+
+**Kind**: global function  
+**Returns**: <code>string</code> \| <code>null</code> - a prose-description or "null" if there is no range  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [min] | <code>number</code> | the lower bound |
+| [max] | <code>number</code> | the upper bound |
+| singular | <code>string</code> | the "thing" in it singular form |
+| plural | <code>string</code> | the "thing" it its plural form |
+
+<a name="json_schema__is_required"></a>
+
+## json_schema__is_required(schema, propertyName) ⇒ <code>boolean</code>
+Returns "true", it the given propertyName is among the required properties
+of a schema
 
 **Kind**: global function  
 
 | Param |
 | --- |
-| range | 
+| schema | 
+| propertyName | 
 
-<a name="stringLengthRange"></a>
+<a name="json_schema__could_be_numeric"></a>
 
-## stringLengthRange(range)
-Render string length restrictions
+## json_schema__could_be_numeric()
+Return true, if the type is numeric (integer or number) or *could be numeric*
+
+The type *could be* numeric, if it is an array that includes number or integer,
+or if it is not specified.
+
+**Kind**: global function  
+**this**: <code>{undefined\|string\|string[]}</code>  
+<a name="json_schema__could_be_of_type"></a>
+
+## json_schema__could_be_of_type(type)
+Return true, if the type is a string or *could be* a string
+
+The type *could be* string, if it is an array that includes number or integer,
+or if it is not specified.
 
 **Kind**: global function  
 
-| Param | Type |
-| --- | --- |
-| range |  | 
-| range.maxLength | <code>number</code> | 
-| range.minLength | <code>number</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | the type property of the schema |
+
+<a name="json_schema__split_coma"></a>
+
+## json_schema__split_coma(list) ⇒ <code>Array.&lt;string&gt;</code>
+Splits a coma-separated list into an array.
+
+This helper can be used as nested-helper for other helpers that expect arrays
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;string&gt;</code> - the list items as array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| list | <code>string</code> | a coma-separated list of strings |
+
+<a name="json_schema__is_array"></a>
+
+## json_schema__is_array(value) ⇒ <code>boolean</code>
+Returns true, if the value is an array
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - true, if the value is an array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | the value |
+
+<a name="json_schema__enumerate"></a>
+
+## json_schema__enumerate(items) ⇒
+Convert an array into a prose-enumeration
+
+**Kind**: global function  
+**Returns**: an written enumeration (a,b and c)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| items | <code>Array.&lt;string&gt;</code> | an array of strings (e.g. ['a','b','c']) |
 
 
 
