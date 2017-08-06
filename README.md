@@ -11,7 +11,7 @@ This bootprint-module can be used to convert a json-schema to a human-readbable 
 
 ## Features
 
-* Complete support for the keywords from JSON-schema [draft-04](https://tools.ietf.org/html/draft-fge-json-schema-validation-00) and [draft-06](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)
+* Complete support for the keywords from JSON-schema [draft-04](https://tools.ietf.org/html/draft-fge-json-schema-validation-00), [draft-05](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) and [draft-06](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)
 * Links to the specification for all keywords
 * Full test coverage of JavaScript-code
 * Lots of tests to cover Handlebars templates and partials
