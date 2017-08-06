@@ -1,0 +1,87 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$explicitSchemaVersion": "draft-05",
+  "description": "schema to test arrays",
+  "definitions": {
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "multiTypeArray": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "integer"
+        ]
+      }
+    },
+    "arrayOfStringArrays": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "restrictedIntegerArray": {
+      "type": "array",
+      "items": {
+        "maximum": 5,
+        "minimum": 2,
+        "type": "integer"
+      }
+    },
+    "uniqueArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "fixedArrayItems": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": [
+        {
+          "type": "string",
+          "minLength": 5
+        },
+        {
+          "type": "number",
+          "maximum": 5
+        }
+      ],
+      "additionalItems": {
+        "type": "string",
+        "maxLength": 4
+      }
+    },
+    "restrictedArrayLength": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "minimumArrayLength": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "maximumArrayLength": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

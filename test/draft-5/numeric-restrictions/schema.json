@@ -1,0 +1,52 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$explicitSchemaVersion": "draft-05",
+  "description": "schema to test numeric restrictions",
+  "definitions": {
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "bestFriends": {
+      "type": "integer",
+      "maximum": 5
+    },
+    "two_to_three": {
+      "type": "number",
+      "maximum": 3.0,
+      "exclusiveMaximum": true,
+      "minimum": 2.0,
+      "exclusiveMinimum": true
+    },
+    "less_than_three": {
+      "type": "number",
+      "maximum": 3.0,
+      "exclusiveMaximum": true
+    },
+    "more_than_two": {
+      "type": "number",
+      "minimum": 2.0,
+      "exclusiveMinimum": true
+    },
+    "multiples_of_three": {
+      "multipleOf": 3
+    },
+    "all_restrictions": {
+      "type": "number",
+      "multipleOf": 3,
+      "maximum": 16.0,
+      "exclusiveMaximum": true,
+      "minimum": 2.0,
+      "exclusiveMinimum": true
+    },
+    "string_with_range": {
+      "type": "string",
+      "multipleOf": 3,
+      "maximum": 1.0,
+      "exclusiveMaximum": true,
+      "minimum": 1.5,
+      "exclusiveMinimum": true
+    }
+  }
+}

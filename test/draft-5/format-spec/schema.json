@@ -1,0 +1,29 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$explicitSchemaVersion": "draft-05",
+  "description": "schema to test formats",
+  "definitions": {
+    "format-date-time": {
+      "format": "date-time"
+    },
+    "format-email": {
+      "format": "email"
+    },
+    "format-hostname": {
+      "format": "hostname"
+    },
+    "format-ipv4": {
+      "format": "ipv4"
+    },
+    "format-ipv6": {
+      "format": "ipv6"
+    },
+    "format-uri": {
+      "format": "uri"
+    },
+    "format-non-standard": {
+      "format": "my-personal-custom-format"
+    }
+  }
+}

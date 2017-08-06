@@ -1,6 +1,9 @@
 /* eslint-disable camelcase */
 
-const { range } = require('./utils')
+// draft-04 and draft-05 have the same logic concerning
+// minimum, maximum, exclusiveMinimum, exclusiveMaximum
+// so we can reuse the helper here
+const { json_schema__number_range } = require('./helpers-draft-05')
 
 const metadata = {
   name: 'draft-04',
@@ -25,7 +28,7 @@ const metadata = {
       'maxProperties': '5.4.1',
       'required': '5.4.3',
       'properties': '5.4.4',
-      'patternProperties': '5.4.4', // TODO: Check again
+      'patternProperties': '5.4.4',
       'additionalProperties': '5.4.4',
       'dependencies': '5.4.5',
       'enum': '5.5.1',
@@ -46,10 +49,6 @@ const metadata = {
       'uri': '7.3.6'
     }
   }
-}
-
-function json_schema__number_range (schema) {
-  return range(schema.minimum, schema.exclusiveMinimum, schema.maximum, schema.exclusiveMaximum, 'x')
 }
 
 module.exports = {

@@ -1,0 +1,56 @@
+{
+  "id": "http://some.site.somewhere/entry-schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$explicitSchemaVersion": "draft-05",
+  "description": "schem to test arrays",
+  "definitions": {
+    "all-object-restrictions": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "shoeSize": {
+          "type": "number",
+          "minimum": 3,
+          "maximum": 30
+        }
+      },
+      "patternProperties": {
+        "another.*": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "dependencies": {
+        "apples": [
+          "pears",
+          "bananas",
+          "melons"
+        ],
+        "pi": {
+          "type": "object",
+          "properties": {
+            "bananas": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "age",
+        "anotherOne"
+      ],
+      "minProperties": 2,
+      "maxProperties": 5
+    }
+  }
+}

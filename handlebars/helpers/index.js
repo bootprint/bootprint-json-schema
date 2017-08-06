@@ -26,6 +26,7 @@ const {safe} = require('./utils')
 
 const versionDispatch = {
   'draft-04': require('./helpers-draft-04'),
+  'draft-05': require('./helpers-draft-05'),
   'draft-06': require('./helpers-draft-06')
 }
 
