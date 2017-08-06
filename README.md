@@ -7,15 +7,17 @@
 
 > Converts a json-schema into a static html page
 
-This bootprint-module can be used to convert a json-schema to a human-readbable HTML.
+This bootprint-module can be used to convert a json-schema to a human-readable HTML.
 
 ## Features
 
 * Complete support for the keywords from JSON-schema [draft-04](https://tools.ietf.org/html/draft-fge-json-schema-validation-00), [draft-05](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) and [draft-06](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)
+* Auto-detection of the schema-version based on the `$schema`-property.
+* Auto-detection can be overridden by setting e.g. `"$explicitSchemaVersion": "draft-05"`
 * Links to the specification for all keywords
+
 * Full test coverage of JavaScript-code
 * Lots of tests to cover Handlebars templates and partials
-
 
 
 # Installation
