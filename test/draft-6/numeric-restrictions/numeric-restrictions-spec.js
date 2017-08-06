@@ -32,6 +32,11 @@ describe('draft-06: Numeric-restrictions', function () {
       .to.equal('https://tools.ietf.org/html/draft-wright-json-schema-validation-01#section-6.4')
   })
 
+  it('should display the correct explanation text', function () {
+    expect(bptest.textIn(select('age', 'minimum', '> .header')))
+      .to.equal('Numeric range (6.4, 6.2, 6.5, 6.3)')
+  })
+
   it('should have a upper bounded range for bestFriends', function () {
     expect(
       bptest.textIn(select('bestFriends', 'minimum', '.contents')))
@@ -56,6 +61,16 @@ describe('draft-06: Numeric-restrictions', function () {
   it('should display multipleOf-properties', function () {
     expect(bptest.textIn(select('multiples_of_three', 'multipleOf', '.contents')))
       .to.equal('x must be a multiple of 3')
+  })
+
+  it('should display a the doclink to the draft-05-schema (multipleOf)', function () {
+    expect(bptest.$(select('multiples_of_three', 'multipleOf', '.header a')).attr('href'))
+      .to.equal('https://tools.ietf.org/html/draft-wright-json-schema-validation-01#section-6.1')
+  })
+
+  it('should display the correct explanation text (multipleOf)', function () {
+    expect(bptest.textIn(select('multiples_of_three', 'multipleOf', '> .header')))
+      .to.equal('Multiple of (6.1)')
   })
 
   it('should display multiple restrictions', function () {

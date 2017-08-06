@@ -12,7 +12,7 @@ var expect = require('chai').expect
 
 var tester = require('bootprint-unit-testing')
 
-const { select } = require('../../utils')
+const {select} = require('../../utils')
 
 describe('draft-04: Numeric-restrictions', function () {
   this.timeout(10000)
@@ -30,6 +30,11 @@ describe('draft-04: Numeric-restrictions', function () {
   it('should display a the doclink to the draft-04-schema', function () {
     expect(bptest.$(select('age', 'minimum', '.header a:first-child')).attr('href'))
       .to.equal('https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.3')
+  })
+
+  it('should display the correct explanation text', function () {
+    expect(bptest.textIn(select('age', 'minimum', '> .header')))
+      .to.equal('Numeric range (5.1.3, 5.1.2, 5.1.3, 5.1.2)')
   })
 
   it('should have a upper bounded range for bestFriends', function () {
@@ -56,6 +61,16 @@ describe('draft-04: Numeric-restrictions', function () {
   it('should display multipleOf-properties', function () {
     expect(bptest.textIn(select('multiples_of_three', 'multipleOf', '.contents')))
       .to.equal('x must be a multiple of 3')
+  })
+
+  it('should display a the doclink to the draft-04-schema (multipleOf)', function () {
+    expect(bptest.$(select('multiples_of_three', 'multipleOf', '.header a')).attr('href'))
+      .to.equal('https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.1.1')
+  })
+
+  it('should display the correct explanation text (multipleOf)', function () {
+    expect(bptest.textIn(select('multiples_of_three', 'multipleOf', '> .header')))
+      .to.equal('Multiple of (5.1.1)')
   })
 
   it('should display multiple restrictions', function () {
