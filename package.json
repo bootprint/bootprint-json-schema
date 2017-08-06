@@ -3,7 +3,7 @@
     "tag": "next"
   },
   "name": "bootprint-json-schema",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0-rc.3",
   "description": "Converts a json-schema into a static html page",
   "main": "index.js",
   "scripts": {

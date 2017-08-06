@@ -2,6 +2,12 @@
 
 
 <a name="current-release"></a>
+# Version 2.0.0-rc.3 (Sun, 06 Aug 2017 13:16:33 GMT)
+
+* [d40ed07](https://github.com/bootprint/bootprint-json-schema/commit/d40ed07) Update documentation - Nils Knappmeier
+* [3192776](https://github.com/bootprint/bootprint-json-schema/commit/3192776) Add tests for multipleOf for draft-04 and -06 - Nils Knappmeier
+* [cadc7e6](https://github.com/bootprint/bootprint-json-schema/commit/cadc7e6) Support for JSON-schema draft-05 - Nils Knappmeier
+
 # Version 2.0.0-rc.2 (Sat, 05 Aug 2017 22:41:02 GMT)
 
 * [955e501](https://github.com/bootprint/bootprint-json-schema/commit/955e501) Update documentation - Nils Knappmeier
